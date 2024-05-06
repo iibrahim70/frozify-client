@@ -15,7 +15,6 @@ import bannerFive from "@/assets/banner/banner-5.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// Create an array of banner images
 const bannerImages = [bannerTwo, bannerThree, bannerFour, bannerFive];
 
 const Hero = () => {

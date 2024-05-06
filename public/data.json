@@ -1,0 +1,371 @@
+[
+  {
+    "_id": "1",
+    "productName": "LG Direct Cool Refrigerator",
+    "brand": "LG",
+    "price": 449.99,
+    "discountPercent": 5,
+    "discountedPrice": 427.49,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 50,
+    "category": "fridge",
+    "subcategory": "Direct Cool",
+    "productDetails": "Capacity: 190 L, 3 Star Energy Rating, Smart Inverter Compressor"
+  },
+  {
+    "_id": "2",
+    "productName": "Haier Non Frost Refrigerator",
+    "brand": "Haier",
+    "price": 599.99,
+    "discountPercent": 10,
+    "discountedPrice": 539.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Non Frost",
+    "productDetails": "Capacity: 250 L, Top Freezer, Toughened Glass Shelves"
+  },
+  {
+    "_id": "3",
+    "productName": "Coca-Cola Beverage Cooler",
+    "brand": "Coca-Cola",
+    "price": 299.99,
+    "discountPercent": 0,
+    "discountedPrice": 299.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 20,
+    "category": "fridge",
+    "subcategory": "Beverage Cooler",
+    "productDetails": "Capacity: 120 cans, Adjustable Thermostat, LED Interior Light"
+  },
+  {
+    "_id": "4",
+    "productName": "Whirlpool Freezer",
+    "brand": "Whirlpool",
+    "price": 799.99,
+    "discountPercent": 0,
+    "discountedPrice": 799.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Freezer",
+    "productDetails": "Capacity: 200 L, Frost-Free, Fast Ice Making"
+  },
+  {
+    "_id": "5",
+    "productName": "Samsung Side-by-Side Refrigerator",
+    "brand": "Samsung",
+    "price": 1699.99,
+    "discountPercent": 15,
+    "discountedPrice": 1444.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Side-by-Side",
+    "productDetails": "Capacity: 600 L, All-around Cooling, Digital Inverter Technology"
+  },
+  {
+    "_id": "6",
+    "productName": "LG French Door Refrigerator",
+    "brand": "LG",
+    "price": 1799.99,
+    "discountPercent": 10,
+    "discountedPrice": 1619.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "French Door",
+    "productDetails": "Capacity: 570 L, Door Cooling+, Smart Diagnosis"
+  },
+  {
+    "_id": "7",
+    "productName": "Haier Compact Refrigerator",
+    "brand": "Haier",
+    "price": 149.99,
+    "discountPercent": 5,
+    "discountedPrice": 142.49,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Compact",
+    "productDetails": "Capacity: 90 L, Single Door, Adjustable Thermostat"
+  },
+  {
+    "_id": "8",
+    "productName": "Samsung Direct Cool Refrigerator",
+    "brand": "Samsung",
+    "price": 399.99,
+    "discountPercent": 0,
+    "discountedPrice": 399.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": false,
+    "category": "fridge",
+    "subcategory": "Direct Cool",
+    "productDetails": "Capacity: 180 L, Stabilizer-Free Operation, Toughened Glass Shelves"
+  },
+  {
+    "_id": "9",
+    "productName": "Whirlpool Non Frost Refrigerator",
+    "brand": "Whirlpool",
+    "price": 649.99,
+    "discountPercent": 10,
+    "discountedPrice": 584.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Non Frost",
+    "productDetails": "Capacity: 300 L, Bottom Freezer, FreshFlow Air Tower"
+  },
+  {
+    "_id": "10",
+    "productName": "LG Beverage Cooler",
+    "brand": "LG",
+    "price": 249.99,
+    "discountPercent": 0,
+    "discountedPrice": 249.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Beverage Cooler",
+    "productDetails": "Capacity: 150 cans, Tempered Glass Door, Adjustable Thermostat"
+  },
+  {
+    "_id": "11",
+    "productName": "Samsung Freezer",
+    "brand": "Samsung",
+    "price": 899.99,
+    "discountPercent": 5,
+    "discountedPrice": 854.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Freezer",
+    "productDetails": "Capacity: 250 L, Power Freeze function, Big Bottle Guard"
+  },
+  {
+    "_id": "12",
+    "productName": "LG Side-by-Side Refrigerator",
+    "brand": "LG",
+    "price": 1499.99,
+    "discountPercent": 15,
+    "discountedPrice": 1274.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Side-by-Side",
+    "productDetails": "Capacity: 550 L, InstaView Door-in-Door, Linear Compressor"
+  },
+  {
+    "_id": "13",
+    "productName": "Whirlpool French Door Refrigerator",
+    "brand": "Whirlpool",
+    "price": 1999.99,
+    "discountPercent": 20,
+    "discountedPrice": 1599.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "French Door",
+    "productDetails": "Capacity: 600 L, 6th Sense IntelliFresh Technology, Active Deo"
+  },
+  {
+    "_id": "14",
+    "productName": "Haier Compact Refrigerator",
+    "brand": "Haier",
+    "price": 129.99,
+    "discountPercent": 0,
+    "discountedPrice": 129.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Compact",
+    "productDetails": "Capacity: 50 L, Mini Freezer, Reversible Door"
+  },
+  {
+    "_id": "15",
+    "productName": "LG Direct Cool Refrigerator",
+    "brand": "LG",
+    "price": 499.99,
+    "discountPercent": 10,
+    "discountedPrice": 449.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Direct Cool",
+    "productDetails": "Capacity: 215 L, Solar Smart Refrigerator, Base Stand with Drawer"
+  },
+  {
+    "_id": "16",
+    "productName": "Samsung Non Frost Refrigerator",
+    "brand": "Samsung",
+    "price": 749.99,
+    "discountPercent": 15,
+    "discountedPrice": 637.49,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Non Frost",
+    "productDetails": "Capacity: 320 L, All-Around Cooling, Digital Inverter Technology"
+  },
+  {
+    "_id": "17",
+    "productName": "Coca-Cola Beverage Cooler",
+    "brand": "Coca-Cola",
+    "price": 279.99,
+    "discountPercent": 0,
+    "discountedPrice": 279.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Beverage Cooler",
+    "productDetails": "Capacity: 120 cans, Retro Design, LED Interior Lighting"
+  },
+  {
+    "_id": "18",
+    "productName": "Whirlpool Freezer",
+    "brand": "Whirlpool",
+    "price": 899.99,
+    "discountPercent": 5,
+    "discountedPrice": 854.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Freezer",
+    "productDetails": "Capacity: 280 L, DeepFreeze Technology, 7 Days Garden Freshness"
+  },
+  {
+    "_id": "19",
+    "productName": "Samsung Side-by-Side Refrigerator",
+    "brand": "Samsung",
+    "price": 1799.99,
+    "discountPercent": 10,
+    "discountedPrice": 1619.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "Side-by-Side",
+    "productDetails": "Capacity: 600 L, SpaceMax Technology, Metal Cooling"
+  },
+  {
+    "_id": "20",
+    "productName": "LG French Door Refrigerator",
+    "brand": "LG",
+    "price": 2099.99,
+    "discountPercent": 20,
+    "discountedPrice": 1679.99,
+    "images": [
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-DZ-1.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-Without-Content-DZ-5.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Front-View-With-Content-DZ-6.jpg",
+      "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-d199obed_abezebn_eail_in_c/gallery/GL-D199OBED-Refrigerators-Back-View-DZ-10.jpg"
+    ],
+    "inStock": 30,
+    "category": "fridge",
+    "subcategory": "French Door",
+    "productDetails": "Capacity: 620 L, InstaView Door-in-Door, Hygiene Fresh+"
+  }
+]
