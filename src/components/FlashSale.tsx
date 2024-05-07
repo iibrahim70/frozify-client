@@ -1,6 +1,10 @@
+"use client";
+
 import { Button } from "./ui/button";
 import products from "../../public/data.json";
-import ProductCard, { IProduct } from "./ProductCard";
+import ProductCard from "./ProductCard";
+import { IProduct } from "@/types";
+import CountDown from "./CountDown";
 
 const FlashSale = () => {
   return (
@@ -9,10 +13,12 @@ const FlashSale = () => {
         <div className="flex items-center justify-between gap-5">
           <div className="flex flex-col gap-y-3">
             <h1>Flash Sale</h1>
-            <p>Ending in 10h : 30m : 10s</p>
+            <p>
+              Ending in <CountDown />
+            </p>
           </div>
 
-          <Button size="sm">View All</Button>
+          <Button size="sm">See All Deals</Button>
         </div>
 
         <ProductCard data={products as IProduct[]} />

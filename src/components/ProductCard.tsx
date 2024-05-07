@@ -1,24 +1,12 @@
 import { cn } from "@/lib/utils";
+import { IProduct } from "@/types";
 import Image from "next/image";
 import { Button } from "./ui/button";
-
-export interface IProduct {
-  _id: string;
-  productName: string;
-  brand: string;
-  price: number;
-  discountPercent: number;
-  discountedPrice: number;
-  images: string[];
-  inStock: number;
-  category: string;
-  subcategory: string;
-  productDetails: string;
-}
+import { Rate } from "antd";
 
 const ProductCard = ({ data }: { data: IProduct[] }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
       {data?.map((item: IProduct) => (
         <div
           key={item?._id}
@@ -47,8 +35,21 @@ const ProductCard = ({ data }: { data: IProduct[] }) => {
               {item?.productName}
             </p>
 
+            <p className="line-clamp-3">{item?.title}</p>
+
+            <div className="flex items-center gap-3">
+              <Rate disabled allowHalf defaultValue={item?.rating} />
+              <p>({item?.numberOfRatings})</p>
+            </div>
+
             <div className="flex items-center justify-between">
-              <h4>$ {item?.discountedPrice}</h4>
+              <h4>
+                ${" "}
+                {(
+                  item?.price -
+                  item?.price * (item?.discountPercent / 100)
+                ).toFixed(2)}
+              </h4>
 
               <s
                 className={cn(item?.discountPercent >= 1 ? "block" : "hidden")}
@@ -56,10 +57,9 @@ const ProductCard = ({ data }: { data: IProduct[] }) => {
                 $ {item?.price}
               </s>
             </div>
-
             <div className="flex items-center justify-between gap-5">
-              <Button size="sm">View Details</Button>
-              <Button size="sm">Cart</Button>
+              <Button size="sm">Add to Bucket</Button>
+              <Button size="sm">Explore Further</Button>
             </div>
           </div>
         </div>
