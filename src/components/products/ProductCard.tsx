@@ -6,9 +6,15 @@ import { Rate } from "antd";
 import Link from "next/link";
 import formatCurrency from "@/helpers/formatCurrency";
 
-const ProductCard = ({ data }: { data: IProduct[] }) => {
+const ProductCard = ({
+  data,
+  className,
+}: {
+  data: IProduct[];
+  className: string;
+}) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+    <div className={className}>
       {data?.map((item: IProduct) => (
         <div
           key={item?._id}
