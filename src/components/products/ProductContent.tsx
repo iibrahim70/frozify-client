@@ -3,6 +3,7 @@ import { IProduct } from "@/types";
 import { Button } from "../ui/button";
 import { Rate } from "antd";
 import { cn } from "@/lib/utils";
+import SocialShare from "../SocialShare";
 
 const ProductContent = ({ product }: { product: IProduct }) => {
   return (
@@ -34,11 +35,15 @@ const ProductContent = ({ product }: { product: IProduct }) => {
         </s>
       </div>
 
-      <div className="flex items-center gap-5">
-        <Button size="sm">Buy Now</Button>
-        <Button size="sm" variant="outline">
-          Add to Bucket
-        </Button>
+      <div className="flex items-center justify-between gap-5">
+        <div className="flex items-center gap-5">
+          <Button size="sm">Buy Now</Button>
+          <Button size="sm" variant="outline" className="border-black">
+            Add to Bucket
+          </Button>
+        </div>
+
+        <SocialShare />
       </div>
 
       <div className="flex flex-col gap-2.5">

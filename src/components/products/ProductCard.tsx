@@ -69,7 +69,10 @@ const ProductCard = ({
 
               <Link
                 href={`products/${item?._id}`}
-                className={buttonVariants({ size: "sm", variant: "outline" })}
+                className={cn(
+                  buttonVariants({ size: "sm", variant: "outline" }),
+                  "border-black"
+                )}
               >
                 Explore Further
               </Link>
