@@ -27,12 +27,13 @@ const ProductContent = ({ product }: { product: IProduct }) => {
         )}
       </h3>
 
-      <div className="flex items-center justify-end gap-10">
-        <Button size="sm">Checkout</Button>
-        <Button size="sm">Add to Bucket</Button>
+      <div className="flex items-center gap-5">
+        <Button size="sm">Buy Now</Button>
+        <Button size="sm" variant="outline">
+          Add to Bucket
+        </Button>
       </div>
 
-      {/* <ProductDetailModalButtons {...product} /> */}
       <div className="flex flex-col gap-2.5">
         <p className="font-semibold uppercase text-dark/75 border-b pb-2.5">
           Product Description

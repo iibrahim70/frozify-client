@@ -9,37 +9,37 @@ interface IProductImage {
 }
 
 const ProductImage = ({ images, title }: IProductImage) => {
-  const [currImage, setCurrImage] = useState<number>(0);
+  const [currentImage, setCurrentImage] = useState<number>(0);
 
   return (
-    <div className="w-full h-full grid grid-rows-5 gap-5 overflow-hidden bg-green-500">
+    <div className="grid grid-rows-5 gap-5 overflow-hidden rounded-md border">
       {/* large images */}
-      <div className="order-last md:order-first row-span-4 w-full h-full rounded-xl overflow-hidden">
+      <div className="order-last md:order-first row-span-4 rounded-xl overflow-hidden">
         <Image
-          src={images[currImage]}
+          src={images[currentImage]}
           alt={title}
-          width={1280}
-          height={720}
+          width={500}
+          height={500}
           priority
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* small images */}
-      <div className="w-full h-full grid grid-cols-4 gap-5">
-        {images?.map((image: string, i: number) => (
+      <div className="grid grid-cols-4 gap-5">
+        {images?.map((image: string, index: number) => (
           <div
-            onMouseOver={() => setCurrImage(i)}
-            key={i + image}
-            className="w-full h-full rounded-lg overflow-hidden cursor-pointer hover:brightness-75 duration-300 ease-in-out"
+            onMouseOver={() => setCurrentImage(index)}
+            key={image + index}
+            className="rounded-md overflow-hidden cursor-pointer hover:brightness-90 duration-300 ease-in-out border"
           >
             <Image
               src={image}
               alt={title}
-              width={180}
-              height={180}
+              width={500}
+              height={500}
               priority
-              className="w-full h-full object-cover"
+              className="size-20 object-cover"
             />
           </div>
         ))}

@@ -32,7 +32,7 @@ const ProductCard = ({ data }: { data: IProduct[] }) => {
             </span>
           </div>
 
-          <div className="p-5 space-y-3">
+          <div className="px-3 py-5 space-y-3">
             <p className="font-semibold text-base truncate">
               {item?.productName}
             </p>
@@ -63,7 +63,7 @@ const ProductCard = ({ data }: { data: IProduct[] }) => {
 
               <Link
                 href={`products/${item?._id}`}
-                className={buttonVariants({ size: "sm" })}
+                className={buttonVariants({ size: "sm", variant: "outline" })}
               >
                 Explore Further
               </Link>
