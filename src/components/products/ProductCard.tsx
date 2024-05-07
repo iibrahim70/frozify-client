@@ -14,7 +14,7 @@ const ProductCard = ({
   className: string;
 }) => {
   return (
-    <div className={className}>
+    <section className={className}>
       {data?.map((item: IProduct) => (
         <div
           key={item?._id}
@@ -77,7 +77,7 @@ const ProductCard = ({
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

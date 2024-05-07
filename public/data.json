@@ -43,9 +43,9 @@
   },
   {
     "_id": "3",
-    "productName": "Coca-Cola Beverage Cooler",
+    "productName": "Hisense Beverage Cooler",
     "title": "Keep beverages chilled with this cooler featuring LED lighting and adjustable temperature control.",
-    "brand": "Coca-Cola",
+    "brand": "Hisense",
     "price": 299.99,
     "discountPercent": 0,
     "flashSale": false,
@@ -337,9 +337,9 @@
   },
   {
     "_id": "17",
-    "productName": "Coca-Cola Beverage Cooler",
+    "productName": "Hisense Beverage Cooler",
     "title": "Ideal for entertaining, this beverage cooler features a glass door and lockable wheels for easy mobility.",
-    "brand": "Coca-Cola",
+    "brand": "Hisense",
     "price": 279.99,
     "discountPercent": 0,
     "flashSale": false,
