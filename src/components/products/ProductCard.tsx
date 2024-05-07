@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { IProduct } from "@/types";
 import Image from "next/image";
-import { Button, buttonVariants } from "./ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import { Rate } from "antd";
 import Link from "next/link";
 import formatCurrency from "@/helpers/formatCurrency";

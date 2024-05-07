@@ -1,5 +1,5 @@
 import products from "../../../public/data.json";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/products/ProductCard";
 import { IProduct } from "@/types";
 
 const Products = () => {

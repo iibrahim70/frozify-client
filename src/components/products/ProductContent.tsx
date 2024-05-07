@@ -1,11 +1,12 @@
 import formatCurrency from "@/helpers/formatCurrency";
 import { IProduct } from "@/types";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { Rate } from "antd";
+import { cn } from "@/lib/utils";
 
 const ProductContent = ({ product }: { product: IProduct }) => {
   return (
-    <section className="space-y-3.5">
+    <section className="space-y-5">
       <h1>{product?.productName}</h1>
 
       <p>{product?.title}</p>
@@ -21,11 +22,17 @@ const ProductContent = ({ product }: { product: IProduct }) => {
         </div>
       </div>
 
-      <h3>
-        {formatCurrency(
-          product?.price - product?.price * (product?.discountPercent / 100)
-        )}
-      </h3>
+      <div className="flex items-center gap-10">
+        <h3>
+          {formatCurrency(
+            product?.price - product?.price * (product?.discountPercent / 100)
+          )}
+        </h3>
+
+        <s className={cn(product?.discountPercent >= 1 ? "block" : "hidden")}>
+          {formatCurrency(product?.price)}
+        </s>
+      </div>
 
       <div className="flex items-center gap-5">
         <Button size="sm">Buy Now</Button>

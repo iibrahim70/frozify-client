@@ -39,7 +39,7 @@ const ProductImage = ({ images, title }: IProductImage) => {
               width={500}
               height={500}
               priority
-              className="size-20 object-cover"
+              className="size-20 w-full object-cover"
             />
           </div>
         ))}

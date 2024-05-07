@@ -1,6 +1,6 @@
-import ProductContent from "@/components/ProductContent";
+import ProductContent from "@/components/products/ProductContent";
 import products from "../../../../public/data.json";
-import ProductImage from "@/components/ProductImage";
+import ProductImage from "@/components/products/ProductImage";
 import { IProduct } from "@/types";
 
 const ProductDetails = ({ params }: { params: { slug: string } }) => {

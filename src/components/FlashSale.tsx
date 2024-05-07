@@ -2,7 +2,7 @@
 
 import { Button } from "./ui/button";
 import products from "../../public/data.json";
-import ProductCard from "./ProductCard";
+import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
 import CountDown from "./CountDown";
 
