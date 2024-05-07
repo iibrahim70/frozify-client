@@ -16,7 +16,7 @@
     "inStock": 50,
     "category": "fridge",
     "subcategory": "Direct Cool",
-    "productDetails": "Capacity: 190 L, 3 Star Energy Rating, Smart Inverter Compressor",
+    "productDescription": "Capacity: 190 L, 3 Star Energy Rating, Smart Inverter Compressor",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -37,7 +37,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Non Frost",
-    "productDetails": "Capacity: 250 L, Top Freezer, Toughened Glass Shelves",
+    "productDescription": "Capacity: 250 L, Top Freezer, Toughened Glass Shelves",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -58,7 +58,7 @@
     "inStock": 20,
     "category": "fridge",
     "subcategory": "Beverage Cooler",
-    "productDetails": "Capacity: 120 cans, Adjustable Thermostat, LED Interior Light",
+    "productDescription": "Capacity: 120 cans, Adjustable Thermostat, LED Interior Light",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -79,7 +79,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Freezer",
-    "productDetails": "Capacity: 200 L, Frost-Free, Fast Ice Making",
+    "productDescription": "Capacity: 200 L, Frost-Free, Fast Ice Making",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -100,7 +100,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Side-by-Side",
-    "productDetails": "Capacity: 600 L, All-around Cooling, Digital Inverter Technology",
+    "productDescription": "Capacity: 600 L, All-around Cooling, Digital Inverter Technology",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -121,7 +121,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "French Door",
-    "productDetails": "Capacity: 570 L, Door Cooling+, Smart Diagnosis",
+    "productDescription": "Capacity: 570 L, Door Cooling+, Smart Diagnosis",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -142,7 +142,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Compact",
-    "productDetails": "Capacity: 90 L, Single Door, Adjustable Thermostat",
+    "productDescription": "Capacity: 90 L, Single Door, Adjustable Thermostat",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -163,7 +163,7 @@
     "inStock": false,
     "category": "fridge",
     "subcategory": "Direct Cool",
-    "productDetails": "Capacity: 180 L, Stabilizer-Free Operation, Toughened Glass Shelves",
+    "productDescription": "Capacity: 180 L, Stabilizer-Free Operation, Toughened Glass Shelves",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -184,7 +184,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Non Frost",
-    "productDetails": "Capacity: 300 L, Bottom Freezer, FreshFlow Air Tower",
+    "productDescription": "Capacity: 300 L, Bottom Freezer, FreshFlow Air Tower",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -205,7 +205,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Beverage Cooler",
-    "productDetails": "Capacity: 150 cans, Tempered Glass Door, Adjustable Thermostat",
+    "productDescription": "Capacity: 150 cans, Tempered Glass Door, Adjustable Thermostat",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -226,7 +226,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Freezer",
-    "productDetails": "Capacity: 250 L, Power Freeze function, Big Bottle Guard",
+    "productDescription": "Capacity: 250 L, Power Freeze function, Big Bottle Guard",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -247,7 +247,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Side-by-Side",
-    "productDetails": "Capacity: 550 L, InstaView Door-in-Door, Linear Compressor",
+    "productDescription": "Capacity: 550 L, InstaView Door-in-Door, Linear Compressor",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -268,7 +268,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "French Door",
-    "productDetails": "Capacity: 600 L, 6th Sense IntelliFresh Technology, Active Deo",
+    "productDescription": "Capacity: 600 L, 6th Sense IntelliFresh Technology, Active Deo",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -289,7 +289,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Compact",
-    "productDetails": "Capacity: 50 L, Mini Freezer, Reversible Door",
+    "productDescription": "Capacity: 50 L, Mini Freezer, Reversible Door",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -310,7 +310,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Direct Cool",
-    "productDetails": "Capacity: 215 L, Solar Smart Refrigerator, Base Stand with Drawer",
+    "productDescription": "Capacity: 215 L, Solar Smart Refrigerator, Base Stand with Drawer",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -331,7 +331,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Non Frost",
-    "productDetails": "Capacity: 320 L, All-Around Cooling, Digital Inverter Technology",
+    "productDescription": "Capacity: 320 L, All-Around Cooling, Digital Inverter Technology",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -352,7 +352,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Beverage Cooler",
-    "productDetails": "Capacity: 120 cans, Retro Design, LED Interior Lighting",
+    "productDescription": "Capacity: 120 cans, Retro Design, LED Interior Lighting",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -373,7 +373,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Freezer",
-    "productDetails": "Capacity: 280 L, DeepFreeze Technology, 7 Days Garden Freshness",
+    "productDescription": "Capacity: 280 L, DeepFreeze Technology, 7 Days Garden Freshness",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -394,7 +394,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "Side-by-Side",
-    "productDetails": "Capacity: 600 L, SpaceMax Technology, Metal Cooling",
+    "productDescription": "Capacity: 600 L, SpaceMax Technology, Metal Cooling",
     "rating": 4.5,
     "numberOfRatings": 25
   },
@@ -415,7 +415,7 @@
     "inStock": 30,
     "category": "fridge",
     "subcategory": "French Door",
-    "productDetails": "Capacity: 620 L, InstaView Door-in-Door, Hygiene Fresh+",
+    "productDescription": "Capacity: 620 L, InstaView Door-in-Door, Hygiene Fresh+",
     "rating": 4.5,
     "numberOfRatings": 25
   }

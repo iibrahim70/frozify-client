@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button, buttonVariants } from "./ui/button";
 import { Rate } from "antd";
 import Link from "next/link";
+import formatCurrency from "@/helpers/formatCurrency";
 
 const ProductCard = ({ data }: { data: IProduct[] }) => {
   return (
@@ -45,17 +46,15 @@ const ProductCard = ({ data }: { data: IProduct[] }) => {
 
             <div className="flex items-center justify-between">
               <h4>
-                ${" "}
-                {(
-                  item?.price -
-                  item?.price * (item?.discountPercent / 100)
-                ).toFixed(2)}
+                {formatCurrency(
+                  item?.price - item?.price * (item?.discountPercent / 100)
+                )}
               </h4>
 
               <s
                 className={cn(item?.discountPercent >= 1 ? "block" : "hidden")}
               >
-                $ {item?.price}
+                {formatCurrency(item?.price)}
               </s>
             </div>
 

@@ -10,7 +10,7 @@ export interface IProduct {
   inStock: number;
   category: string;
   subcategory: string;
-  productDetails: string;
+  productDescription: string;
   rating: number;
   numberOfRatings: number;
 }
