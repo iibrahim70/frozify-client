@@ -1,7 +1,13 @@
-import React from "react";
+import products from "../../../public/data.json";
+import ProductCard from "@/components/ProductCard";
+import { IProduct } from "@/types";
 
-const page = () => {
-  return <div>page</div>;
+const Products = () => {
+  return (
+    <main className="section-wrapper py-10">
+      <ProductCard data={products as IProduct[]} />
+    </main>
+  );
 };
 
-export default page;
+export default Products;

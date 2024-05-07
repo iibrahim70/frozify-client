@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
 import { IProduct } from "@/types";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { Rate } from "antd";
+import Link from "next/link";
 
 const ProductCard = ({ data }: { data: IProduct[] }) => {
   return (
@@ -57,9 +58,16 @@ const ProductCard = ({ data }: { data: IProduct[] }) => {
                 $ {item?.price}
               </s>
             </div>
+
             <div className="flex items-center justify-between gap-5">
               <Button size="sm">Add to Bucket</Button>
-              <Button size="sm">Explore Further</Button>
+
+              <Link
+                href={`products/${item?._id}`}
+                className={buttonVariants({ size: "sm" })}
+              >
+                Explore Further
+              </Link>
             </div>
           </div>
         </div>
