@@ -1,8 +1,13 @@
-import products from "../../../public/data.json";
 import ProductCard from "@/components/products/ProductCard";
+import getRequest from "@/helpers/getRequest";
 import { IProduct } from "@/types";
 
-const Products = () => {
+const Products = async () => {
+  const res = await getRequest(
+    "http://localhost:5000/api/v1/products?fields=productName,productTitle,images,rating,numberOfRatings,price,discountPercent"
+  );
+  const data = res.data;
+
   return (
     <main className="section-wrapper py-10 grid grid-cols-5 gap-10">
       <section className="col-span-1 space-y-5">
@@ -142,7 +147,7 @@ const Products = () => {
 
       <ProductCard
         className="col-span-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
-        data={products as IProduct[]}
+        data={data as IProduct[]}
       />
     </main>
   );

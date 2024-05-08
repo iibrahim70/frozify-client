@@ -6,13 +6,12 @@ import { Rate } from "antd";
 import Link from "next/link";
 import formatCurrency from "@/helpers/formatCurrency";
 
-const ProductCard = ({
-  data,
-  className,
-}: {
+interface ProductCardProps {
   data: IProduct[];
-  className: string;
-}) => {
+  className?: string;
+}
+
+const ProductCard = ({ data, className }: ProductCardProps) => {
   return (
     <section className={className}>
       {data?.map((item: IProduct) => (
@@ -43,7 +42,7 @@ const ProductCard = ({
               {item?.productName}
             </p>
 
-            <p className="line-clamp-3">{item?.title}</p>
+            <p className="line-clamp-3">{item?.productTitle}</p>
 
             <div className="flex items-center gap-3">
               <Rate disabled allowHalf defaultValue={item?.rating} />
