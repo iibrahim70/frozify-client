@@ -1,7 +1,59 @@
-import React from "react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { API_ENDPOINTS } from "@/constants";
+import getRequest from "@/helpers/getRequest";
+import { IProduct } from "@/types";
+import Image from "next/image";
 
-const page = () => {
-  return <div>page</div>;
+const AllProducts = async () => {
+  const res = await getRequest(
+    `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brandName,price`
+  );
+  const products = res?.data;
+
+  return (
+    <Table>
+      <TableHeader>
+        <TableRow className="font-bold text-base">
+          <TableHead className="w-[50px]">SL</TableHead>
+          <TableHead className="w-[150px]">Image</TableHead>
+          <TableHead>Product Name</TableHead>
+          <TableHead>Brand Name</TableHead>
+          <TableHead>Product Id</TableHead>
+          <TableHead>Price</TableHead>
+        </TableRow>
+      </TableHeader>
+
+      {products?.map((item: IProduct, index: number) => (
+        <TableBody key={item?._id}>
+          <TableRow className="font-medium text-opacity-70">
+            <TableCell>{index + 1}</TableCell>
+
+            <TableCell>
+              <Image
+                src={item?.images[0]}
+                alt={item?.productName}
+                width={500}
+                height={500}
+                className="rounded-full size-20 object-cover"
+              />
+            </TableCell>
+
+            <TableCell>{item?.productName}</TableCell>
+            <TableCell className="capitalize">{item?.brandName}</TableCell>
+            <TableCell>{item?._id}</TableCell>
+            <TableCell>{item?.price}</TableCell>
+          </TableRow>
+        </TableBody>
+      ))}
+    </Table>
+  );
 };
 
-export default page;
+export default AllProducts;
