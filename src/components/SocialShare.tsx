@@ -18,12 +18,14 @@ import {
   WhatsappIcon,
 } from "react-share";
 import { Button } from "./ui/button";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const SocialShare = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const shareUrl = "https://chatgpt.com/";
-  const title = "Hello";
+
+  const pathname = usePathname();
+  const baseUrl = "https://frozify.netlify.app";
+  const shareUrl = baseUrl + pathname;
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -46,7 +48,7 @@ const SocialShare = () => {
       </Button>
 
       <Modal
-        title="Share as you want!"
+        title="Share the Web"
         open={isModalOpen}
         onCancel={handleCancel}
         footer={null}
@@ -60,15 +62,15 @@ const SocialShare = () => {
             <FacebookMessengerIcon size={32} round />
           </FacebookMessengerShareButton>
 
-          <TwitterShareButton url={shareUrl} title={title}>
+          <TwitterShareButton url={shareUrl}>
             <XIcon size={32} round />
           </TwitterShareButton>
 
-          <TelegramShareButton url={shareUrl} title={title}>
+          <TelegramShareButton url={shareUrl}>
             <TelegramIcon size={32} round />
           </TelegramShareButton>
 
-          <WhatsappShareButton url={shareUrl} title={title} separator=":: ">
+          <WhatsappShareButton url={shareUrl} separator=":: ">
             <WhatsappIcon size={32} round />
           </WhatsappShareButton>
 

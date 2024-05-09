@@ -23,8 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(baiJamJure.className)}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          <Navbar />
+        <ThemeProvider attribute="class" defaultTheme="white">
           {children}
         </ThemeProvider>
       </body>
