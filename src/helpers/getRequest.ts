@@ -1,8 +1,6 @@
 const getRequest = async (url: string) => {
   const res = await fetch(url, {
-    next: {
-      revalidate: 30,
-    },
+    cache: "no-store",
   });
 
   if (!res.ok) {
