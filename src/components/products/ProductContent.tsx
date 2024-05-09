@@ -10,11 +10,11 @@ const ProductContent = ({ product }: { product: IProduct }) => {
     <section className="space-y-5">
       <h1>{product?.productName}</h1>
 
-      <p>{product?.title}</p>
+      <p>{product?.productTitle}</p>
 
       <div className="flex items-center gap-10">
         <span className="text-xs uppercase font-semibold tracking-widest px-3 py-1.5 rounded bg-orange-300">
-          {product?.subcategory}
+          {product?.subCategory}
         </span>
 
         <div className="flex items-center gap-1">

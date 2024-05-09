@@ -3,12 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 
-interface IProductImage {
+interface IProductImageProps {
   images: string[];
   title: string;
 }
 
-const ProductImage = ({ images, title }: IProductImage) => {
+const ProductImage = ({ images, title }: IProductImageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
 
   return (

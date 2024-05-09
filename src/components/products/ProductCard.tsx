@@ -6,12 +6,12 @@ import { Rate } from "antd";
 import Link from "next/link";
 import formatCurrency from "@/helpers/formatCurrency";
 
-interface ProductCardProps {
+interface IProductCardProps {
   data: IProduct[];
   className?: string;
 }
 
-const ProductCard = ({ data, className }: ProductCardProps) => {
+const ProductCard = ({ data, className }: IProductCardProps) => {
   return (
     <section className={className}>
       {data?.map((item: IProduct) => (
@@ -29,7 +29,7 @@ const ProductCard = ({ data, className }: ProductCardProps) => {
             />
             <span
               className={cn(
-                "bg-red-500 text-white absolute top-0 left-0 rounded-br-xl px-2 py-0.5 font-semibold text-sm",
+                "bg-blue-500 text-white absolute top-0 left-0 rounded-br-xl px-2 py-0.5 font-semibold text-sm",
                 item?.discountPercent >= 1 ? "block" : "hidden"
               )}
             >
