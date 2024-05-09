@@ -1,15 +1,16 @@
-import { Button, buttonVariants } from "./ui/button";
+import { buttonVariants } from "./ui/button";
 import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
 import CountDown from "./CountDown";
 import getRequest from "@/helpers/getRequest";
 import Link from "next/link";
+import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
 
 const FlashSale = async () => {
   const res = await getRequest(
-    "http://localhost:5000/api/v1/products?fields=productName,productTitle,images,rating,numberOfRatings,price,discountPercent&limit=4"
+    `${API_ENDPOINTS.PRODUCTS}?fields=${PRODUCT_FIELDS}&limit=4`
   );
-  const data = res.data;
+  const products = res?.data;
 
   return (
     <section className="section-wrapper min-h-dvh flex items-center pt-10 lg:pt-20">
@@ -29,7 +30,7 @@ const FlashSale = async () => {
 
         <ProductCard
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
-          data={data as IProduct[]}
+          data={products as IProduct[]}
         />
       </div>
     </section>

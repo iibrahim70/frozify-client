@@ -1,13 +1,24 @@
 const getRequest = async (url: string) => {
-  const res = await fetch(url, {
-    cache: "no-store",
-  });
+  try {
+    // Make a fetch request to the provided URL with cache set to "no-store"
+    const res = await fetch(url, {
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
+    // Check if the response is not okay (status code other than 2xx)
+    if (!res?.ok) {
+      // If response is not okay, throw an Error with the status text
+      throw new Error("Network response was not ok " + res?.statusText);
+    }
+
+    // If response is okay, parse the response body as JSON and return it
+    return res?.json();
+  } catch (error) {
+    // If an error occurs during the fetch or parsing, log the error
+    console.error("Error fetching data: ", error);
+    // Throw the error to be handled by the caller
+    throw error;
   }
-  return res?.json();
 };
 
 export default getRequest;

@@ -3,10 +3,11 @@ import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
 import getRequest from "@/helpers/getRequest";
 import Link from "next/link";
+import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
 
 const PopularProducts = async () => {
   const res = await getRequest(
-    "http://localhost:5000/api/v1/products/popular-products?fields=productName,productTitle,images,rating,numberOfRatings,price,discountPercent&limit=8"
+    `${API_ENDPOINTS.POPULAR_PRODUCTS}?fields=${PRODUCT_FIELDS}&limit=8`
   );
   const data = res.data;
 
