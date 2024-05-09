@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
+import Footer from "@/components/shared/Footer";
 
 const baiJamJure = Bai_Jamjuree({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={cn(baiJamJure.className)}>
         <ThemeProvider attribute="class" defaultTheme="white">
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
