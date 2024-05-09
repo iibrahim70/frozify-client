@@ -1,29 +1,26 @@
 import { Button, buttonVariants } from "./ui/button";
 import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
-import CountDown from "./CountDown";
 import getRequest from "@/helpers/getRequest";
 import Link from "next/link";
 
-const FlashSale = async () => {
+const PopularProducts = async () => {
   const res = await getRequest(
-    "http://localhost:5000/api/v1/products?fields=productName,productTitle,images,rating,numberOfRatings,price,discountPercent&limit=4"
+    "http://localhost:5000/api/v1/products?fields=productName,productTitle,images,rating,numberOfRatings,price,discountPercent&limit=8"
   );
   const data = res.data;
 
   return (
-    <section className="section-wrapper min-h-dvh flex items-center pt-10 lg:pt-20">
+    <section className="section-wrapper min-h-dvh flex items-center py-10 lg:py-20">
       <div className="w-full space-y-10">
         <div className="flex items-center justify-between gap-5">
-          <div className="flex flex-col gap-y-3">
-            <h1>Flash Sale</h1>
-            <p className="bg-red-500 text-white font-semibold p-2">
-              Ending in <CountDown />
-            </p>
+          <div className="space-y-1.5">
+            <h1>Popular Products</h1>
+            <p>Check out our wide range of popular products!</p>
           </div>
 
-          <Link href="/flash-sale" className={buttonVariants({ size: "sm" })}>
-            See All Deals
+          <Link href="/products" className={buttonVariants({ size: "sm" })}>
+            Browse Products
           </Link>
         </div>
 
@@ -36,4 +33,4 @@ const FlashSale = async () => {
   );
 };
 
-export default FlashSale;
+export default PopularProducts;
