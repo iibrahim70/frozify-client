@@ -1,5 +1,7 @@
-const AllProducts = () => {
-  return <div>AllProducts</div>;
+import React from "react";
+
+const page = () => {
+  return <div>page</div>;
 };
 
-export default AllProducts;
+export default page;

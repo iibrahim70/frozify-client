@@ -28,39 +28,39 @@ const ProductFilters = () => {
   const selectedSubCategories = searchParams.getAll("subCategories");
   const selectedRatings = searchParams.getAll("ratings");
 
-  const generateQueryParam = () => {
-    let queryParams = "";
+  // const generateQueryParam = () => {
+  //   let queryParams = "";
 
-    // Brands
-    if (selectedBrands.length > 0) {
-      queryParams += `brands=${selectedBrands.join(",")}`;
-    }
+  //   // Brands
+  //   if (selectedBrands.length > 0) {
+  //     queryParams += `brands=${selectedBrands.join(",")}`;
+  //   }
 
-    // Sub Categories
-    if (selectedSubCategories.length > 0) {
-      queryParams += `&subCategories=${selectedSubCategories.join(",")}`;
-    }
+  //   // Sub Categories
+  //   if (selectedSubCategories.length > 0) {
+  //     queryParams += `&subCategories=${selectedSubCategories.join(",")}`;
+  //   }
 
-    // Ratings
-    if (selectedRatings.length > 0) {
-      queryParams += `&ratings=${selectedRatings.join(",")}`;
-    }
+  //   // Ratings
+  //   if (selectedRatings.length > 0) {
+  //     queryParams += `&ratings=${selectedRatings.join(",")}`;
+  //   }
 
-    // Return the constructed query parameters
-    return queryParams ? `?${queryParams}` : "";
-  };
+  //   // Return the constructed query parameters
+  //   return queryParams ? `?${queryParams}` : "";
+  // };
 
-  const generateCheckboxItems = (items, paramName) =>
-    items.map((item, index) => (
-      <Link
-        href={generateQueryParam()}
-        key={index}
-        className="flex items-center gap-2"
-      >
-        <input type="checkbox" name={paramName} value={item} />
-        <label className="capitalize">{item}</label>
-      </Link>
-    ));
+  // const generateCheckboxItems = (items, paramName) =>
+  //   items.map((item, index) => (
+  //     <Link
+  //       href={generateQueryParam()}
+  //       key={index}
+  //       className="flex items-center gap-2"
+  //     >
+  //       <input type="checkbox" name={paramName} value={item} />
+  //       <label className="capitalize">{item}</label>
+  //     </Link>
+  //   ));
 
   return (
     <section className="col-span-1 space-y-5">
@@ -96,7 +96,7 @@ const ProductFilters = () => {
         <hr className="my-5" />
 
         <div className="space-y-2">
-          {generateCheckboxItems(brands, "brands")}
+          {/* {generateCheckboxItems(brands, "brands")} */}
         </div>
       </div>
 
@@ -105,7 +105,7 @@ const ProductFilters = () => {
         <hr className="my-5" />
 
         <div className="space-y-2">
-          {generateCheckboxItems(subCategories, "sub-categories")}
+          {/* {generateCheckboxItems(subCategories, "sub-categories")} */}
         </div>
       </div>
 
@@ -114,7 +114,7 @@ const ProductFilters = () => {
         <hr className="my-5" />
 
         <div className="space-y-2">
-          {generateCheckboxItems(ratings, "ratings")}
+          {/* {generateCheckboxItems(ratings, "ratings")} */}
         </div>
       </div>
     </section>
