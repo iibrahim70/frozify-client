@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "./ui/button";
+import { buttonVariants } from "./ui/button";
 import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
 import getRequest from "@/helpers/getRequest";
@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const PopularProducts = async () => {
   const res = await getRequest(
-    "http://localhost:5000/api/v1/products?fields=productName,productTitle,images,rating,numberOfRatings,price,discountPercent&limit=8"
+    "http://localhost:5000/api/v1/products/popular-products?fields=productName,productTitle,images,rating,numberOfRatings,price,discountPercent&limit=8"
   );
   const data = res.data;
 

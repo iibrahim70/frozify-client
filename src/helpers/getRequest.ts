@@ -1,5 +1,9 @@
 const getRequest = async (url: string) => {
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    next: {
+      revalidate: 30,
+    },
+  });
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
