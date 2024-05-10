@@ -12,15 +12,20 @@ const ProductFilters = () => {
   const createQueryString = useCallback(
     (name: string, value: string) => {
       const params = new URLSearchParams(searchParams.toString());
-
-      // Get the current list of values for the parameter
       const currentValues = params.getAll(name);
 
-      // Append the new value to the existing list
-      const updatedValues = [...currentValues, value];
-
-      // Update the parameter with the new list of values
-      params.set(name, updatedValues.join(","));
+      if (currentValues.includes(value)) {
+        // Remove the item if it's already present
+        const updatedValues = currentValues.filter((item) => item !== value);
+        if (updatedValues.length === 0) {
+          params.delete(name);
+        } else {
+          params.set(name, updatedValues.join(","));
+        }
+      } else {
+        // Add the item if it's not present
+        params.append(name, value);
+      }
 
       return decodeURIComponent(params.toString());
     },
@@ -40,6 +45,11 @@ const ProductFilters = () => {
   ];
   const ratings = [1, 2, 3, 4, 5];
 
+  const isChecked = (name: string, item: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    return params.getAll(name).includes(item);
+  };
+
   return (
     <section className="col-span-1 space-y-5">
       <div className="rounded-xl shadow-md border p-5">
@@ -53,7 +63,7 @@ const ProductFilters = () => {
               className="flex items-center space-x-2"
               key={item}
             >
-              <Checkbox id={item} />
+              <Checkbox id={item} checked={isChecked("brand", item)} />
               <label htmlFor={item} className="capitalize">
                 {item}
               </label>
@@ -73,7 +83,7 @@ const ProductFilters = () => {
               className="flex items-center space-x-2"
               key={item}
             >
-              <Checkbox id={item} />
+              <Checkbox id={item} checked={isChecked("subCategory", item)} />
               <label htmlFor={item} className="capitalize">
                 {item}
               </label>
@@ -93,7 +103,10 @@ const ProductFilters = () => {
               className="flex items-center space-x-2"
               key={String(item)}
             >
-              <Checkbox id={String(item)} />
+              <Checkbox
+                id={String(item)}
+                checked={isChecked("rating", String(item))}
+              />
               <label htmlFor={String(item)} className="capitalize">
                 {item}
               </label>

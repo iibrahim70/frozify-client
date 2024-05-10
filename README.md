@@ -96,4 +96,4 @@ Frozify is a dynamic marketplace dedicated to elevating user experience and func
 
 ## Getting Started
 
-To get started with Frozify, simply visit [https://www.frozify.com](https://www.frozify.com) and start exploring our wide range of refrigerators today!
+To get started with Frozify, simply visit [Frozify](https://www.frozify.com) and start exploring our wide range of refrigerators today!
