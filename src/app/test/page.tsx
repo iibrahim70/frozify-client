@@ -2,51 +2,30 @@ import React from "react";
 
 const ProductsLoading = () => {
   return (
-    <main className="section-wrappar min-h-[calc(100dvh-64px)] py-10 grid grid-cols-5 gap-10">
+    <main className="section-wrapper grid grid-cols-5 py-10 gap-10">
       {/* filter skeleton */}
       <section className="col-span-1 space-y-5">
-        {
-          
-        }
-        <div className="rounded-xl shadow-md border p-5">
-          <h3>Brands</h3>
-          <hr className="my-5" />
+        {Array.from({ length: 3 }, (_, index) => (
+          <div
+            key={index}
+            className="rounded-md shadow-md border dark:border-[#212121] p-5 cursor-pointer"
+          >
+            <div className="animate-pulse">
+              <div className="h-4 rounded-full bg-[#d0d0d0] dark:bg-[#424242]" />
 
-          <div className="space-y-2">
-            {brands?.map((item) => (
-              <Link
-                href={pathname + "?" + createQueryString("brand", item)}
-                className="flex items-center space-x-2"
-                key={item}
-              >
-                <Checkbox id={item} checked={isChecked("brand", item)} />
-                <label htmlFor={item} className="capitalize">
-                  {item}
-                </label>
-              </Link>
-            ))}
+              <div className="h-1 rounded-full my-5 bg-[#d0d0d0] dark:bg-[#424242]" />
+
+              <div className="space-y-2">
+                {Array.from({ length: 5 }, (_, index) => (
+                  <div
+                    key={index}
+                    className="h-2.5 rounded-full bg-[#d0d0d0] dark:bg-[#424242]"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="rounded-xl shadow-md border p-5">
-          <h3>Sub Category</h3>
-          <hr className="my-5" />
-
-          <div className="space-y-2">
-            {subCategories?.map((item) => (
-              <Link
-                href={pathname + "?" + createQueryString("subCategory", item)}
-                className="flex items-center space-x-2"
-                key={item}
-              >
-                <Checkbox id={item} checked={isChecked("subCategory", item)} />
-                <label htmlFor={item} className="capitalize">
-                  {item}
-                </label>
-              </Link>
-            ))}
-          </div>
-        </div>
+        ))}
       </section>
 
       {/* products skeleton */}
@@ -54,7 +33,7 @@ const ProductsLoading = () => {
         {Array.from({ length: 6 }, (_, index) => (
           <div
             key={index}
-            className="shadow-md rounded-md border border-transparent dark:border-[#212121] cursor-pointer"
+            className="shadow-md rounded-md border dark:border-[#212121] cursor-pointer"
           >
             <div className="animate-pulse">
               <div className="size-60 w-full rounded-t-md bg-[#d0d0d0] dark:bg-[#424242]" />
