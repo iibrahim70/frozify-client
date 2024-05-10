@@ -1,8 +1,8 @@
 const ProductsLoading = () => {
   return (
-    <main className="section-wrapper py-10 grid grid-cols-5 gap-10">
+    <main className="section-wrapper py-10 grid grid-cols-1 lg:grid-cols-5 gap-10">
       {/* filter skeleton */}
-      <section className="col-span-1 space-y-5">
+      <section className="max-md:hidden lg:col-span-1 space-y-5">
         {Array.from({ length: 3 }, (_, index) => (
           <div
             key={index}
@@ -27,7 +27,7 @@ const ProductsLoading = () => {
       </section>
 
       {/* products skeleton */}
-      <section className="col-span-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+      <section className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
         {Array.from({ length: 6 }, (_, index) => (
           <div
             key={index}

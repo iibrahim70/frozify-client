@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
-import { Checkbox } from "./ui/checkbox";
+import { Checkbox } from "../ui/checkbox";
 import { useCallback } from "react";
 import Link from "next/link";
 
@@ -51,7 +51,7 @@ const ProductFilters = () => {
   };
 
   return (
-    <section className="col-span-1 space-y-5">
+    <section className="max-md:hidden lg:col-span-1 space-y-5">
       <div className="rounded-xl shadow-md border p-5">
         <h3>Brands</h3>
         <hr className="my-5" />

@@ -46,7 +46,11 @@ const Hero = () => {
         {/* Dynamically render Swiper slides for JPG banner images */}
         {bannerImages.map((banner, index) => (
           <SwiperSlide key={index}>
-            <Image src={banner} alt={`Banner ${index + 2}`} />
+            <Image
+              src={banner}
+              alt={`Banner ${index + 2}`}
+              placeholder="blur"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
