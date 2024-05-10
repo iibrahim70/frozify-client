@@ -43,13 +43,13 @@ const ProductFilters = () => {
   return (
     <section className="col-span-1 space-y-5">
       <div className="rounded-xl shadow-md border p-5">
-        <h3>Brands</h3>
+        <h3>Brand Name</h3>
         <hr className="my-5" />
 
         <div className="space-y-2">
           {brands?.map((item) => (
             <Link
-              href={pathname + "?" + createQueryString("brands", item)}
+              href={pathname + "?" + createQueryString("brandName", item)}
               className="flex items-center space-x-2"
               key={item}
             >
@@ -63,13 +63,13 @@ const ProductFilters = () => {
       </div>
 
       <div className="rounded-xl shadow-md border p-5">
-        <h3>Sub Categories</h3>
+        <h3>Sub Category</h3>
         <hr className="my-5" />
 
         <div className="space-y-2">
           {subCategories?.map((item) => (
             <Link
-              href={pathname + "?" + createQueryString("subCategories", item)}
+              href={pathname + "?" + createQueryString("subCategory", item)}
               className="flex items-center space-x-2"
               key={item}
             >

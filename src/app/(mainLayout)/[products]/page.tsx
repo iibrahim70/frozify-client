@@ -4,11 +4,24 @@ import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
 import getRequest from "@/helpers/getRequest";
 import { IProduct } from "@/types";
 
-const Products = async () => {
+interface ISearchParamProps {
+  searchParams: {
+    brands?: string;
+    subCategories?: string;
+    ratings?: string;
+  };
+}
+
+const Products = async (params: ISearchParamProps) => {
+  const paramsString = new URLSearchParams(params.searchParams).toString();
+  const decodedParams = decodeURIComponent(paramsString);
+
   const res = await getRequest(
-    `${API_ENDPOINTS.PRODUCTS}?fields=${PRODUCT_FIELDS}`
+    `${API_ENDPOINTS.PRODUCTS}?fields=${PRODUCT_FIELDS}&${decodedParams}`
   );
   const products = res?.data;
+
+  console.log(products.length);
 
   return (
     <main className="section-wrapper py-10 grid grid-cols-5 gap-10">
