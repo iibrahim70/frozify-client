@@ -32,7 +32,7 @@ const AllProducts = async () => {
 
       {products?.map((item: IProduct, index: number) => (
         <TableBody key={item?._id}>
-          <TableRow className="font-medium text-opacity-70">
+          <TableRow>
             <TableCell>{index + 1}</TableCell>
 
             <TableCell>
