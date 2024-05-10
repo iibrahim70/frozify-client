@@ -26,7 +26,7 @@ const Products = async (params: ISearchParamProps) => {
       <ProductFilters />
 
       <ProductCard
-        className="col-span-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+        className="col-span-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 h-fit"
         data={products as IProduct[]}
       />
     </main>

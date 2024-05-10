@@ -14,14 +14,14 @@ const ProductImage = ({ images, title }: IProductImageProps) => {
   return (
     <div className="grid grid-rows-5 gap-5 overflow-hidden rounded-md border">
       {/* large images */}
-      <div className="order-last md:order-first row-span-4 rounded-xl overflow-hidden">
+      <div className="order-last md:order-first row-span-4 rounded-xl overflow-hidden py-3">
         <Image
           src={images[currentImage]}
           alt={title}
           width={500}
           height={500}
           priority
-          className="w-full h-full object-cover"
+          className="size-[30rem] object-cover mx-auto"
         />
       </div>
 
@@ -31,7 +31,7 @@ const ProductImage = ({ images, title }: IProductImageProps) => {
           <div
             onMouseOver={() => setCurrentImage(index)}
             key={image + index}
-            className="rounded-md overflow-hidden cursor-pointer hover:brightness-90 duration-300 ease-in-out border"
+            className="rounded-md overflow-hidden cursor-pointer hover:brightness-90 duration-300 ease-in-out border p-2"
           >
             <Image
               src={image}
@@ -39,7 +39,7 @@ const ProductImage = ({ images, title }: IProductImageProps) => {
               width={500}
               height={500}
               priority
-              className="size-20 w-full object-cover"
+              className="size-24 mx-auto object-cover"
             />
           </div>
         ))}

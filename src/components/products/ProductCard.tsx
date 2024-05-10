@@ -23,7 +23,7 @@ const ProductCard = ({ data, className }: IProductCardProps) => {
             <Image
               width={500}
               height={500}
-              className="scale-100 hover:scale-105 duration-500"
+              className="scale-100 hover:scale-105 duration-500 size-64 mx-auto"
               src={item?.images[0]}
               alt={item?.productName}
             />
