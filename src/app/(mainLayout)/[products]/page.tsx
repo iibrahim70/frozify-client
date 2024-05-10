@@ -21,8 +21,6 @@ const Products = async (params: ISearchParamProps) => {
   );
   const products = res?.data;
 
-  console.log(products.length);
-
   return (
     <main className="section-wrapper py-10 grid grid-cols-5 gap-10">
       <ProductFilters />

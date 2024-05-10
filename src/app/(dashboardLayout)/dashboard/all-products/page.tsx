@@ -13,7 +13,7 @@ import Image from "next/image";
 
 const AllProducts = async () => {
   const res = await getRequest(
-    `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brandName,price`
+    `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price`
   );
   const products = res?.data;
 
@@ -46,7 +46,7 @@ const AllProducts = async () => {
             </TableCell>
 
             <TableCell>{item?.productName}</TableCell>
-            <TableCell className="capitalize">{item?.brandName}</TableCell>
+            <TableCell className="capitalize">{item?.brand}</TableCell>
             <TableCell>{item?._id}</TableCell>
             <TableCell>{item?.price}</TableCell>
           </TableRow>

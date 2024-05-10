@@ -1,4 +1,19 @@
+import paypalIcon from "@/assets/icons/paypal.png";
+import stripeIcon from "@/assets/icons/stripe.png";
+import visaIcon from "@/assets/icons/visa.png";
+import mastercardIcon from "@/assets/icons/mastercard.png";
+import americanExpressIcon from "@/assets/icons/american-express.png";
+import Image from "next/image";
+
 const Footer = () => {
+  const iconArray = [
+    mastercardIcon,
+    americanExpressIcon,
+    visaIcon,
+    stripeIcon,
+    paypalIcon,
+  ];
+
   return (
     <footer className="bg-black/90 text-white/90">
       <div className=" section-wrapper py-10 flex flex-col lg:flex-row justify-between gap-10">
@@ -54,8 +69,21 @@ const Footer = () => {
         <div className="section-wrapper flex flex-wrap items-center justify-between gap-5 lg:gap-10">
           <p>All Rights Reserved. © 2024 Ibrahim Khalil</p>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-5">
             <p>Payment Method</p>
+
+            <div className="flex items-center gap-2">
+              {iconArray.map((item, index) => (
+                <Image
+                  key={index}
+                  src={item}
+                  width={500}
+                  height={500}
+                  alt="Payment Icon"
+                  className="size-8"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
