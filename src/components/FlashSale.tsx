@@ -8,7 +8,7 @@ import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
 
 const FlashSale = async () => {
   const res = await getRequest(
-    `${API_ENDPOINTS.PRODUCTS}?fields=${PRODUCT_FIELDS}&limit=4`
+    `${API_ENDPOINTS.FLASH_SALE}?fields=${PRODUCT_FIELDS}&limit=4`
   );
   const products = res?.data;
 
