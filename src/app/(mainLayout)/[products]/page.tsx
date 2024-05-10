@@ -1,7 +1,7 @@
 import ProductFilters from "@/components/ProductFilters";
 import ProductCard from "@/components/products/ProductCard";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
-import getRequest from "@/helpers/getRequest";
+import { getRequestSsr } from "@/helpers/getRequest";
 import { IProduct } from "@/types";
 
 interface ISearchParamProps {
@@ -16,7 +16,7 @@ const Products = async (params: ISearchParamProps) => {
   const paramsString = new URLSearchParams(params.searchParams).toString();
   const decodedParams = decodeURIComponent(paramsString);
 
-  const res = await getRequest(
+  const res = await getRequestSsr(
     `${API_ENDPOINTS.PRODUCTS}?fields=${PRODUCT_FIELDS}&${decodedParams}`
   );
   const products = res?.data;

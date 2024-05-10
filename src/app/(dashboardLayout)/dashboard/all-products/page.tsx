@@ -7,12 +7,12 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { API_ENDPOINTS } from "@/constants";
-import getRequest from "@/helpers/getRequest";
+import { getRequestSsr } from "@/helpers/getRequest";
 import { IProduct } from "@/types";
 import Image from "next/image";
 
 const AllProducts = async () => {
-  const res = await getRequest(
+  const res = await getRequestSsr(
     `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price`
   );
   const products = res?.data;

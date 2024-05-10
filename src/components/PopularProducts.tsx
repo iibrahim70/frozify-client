@@ -1,12 +1,12 @@
 import { buttonVariants } from "./ui/button";
 import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
-import getRequest from "@/helpers/getRequest";
+import { getRequestIsr } from "@/helpers/getRequest";
 import Link from "next/link";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
 
 const PopularProducts = async () => {
-  const res = await getRequest(
+  const res = await getRequestIsr(
     `${API_ENDPOINTS.POPULAR_PRODUCTS}?fields=${PRODUCT_FIELDS}&limit=8`
   );
   const data = res.data;

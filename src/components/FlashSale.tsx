@@ -2,12 +2,12 @@ import { buttonVariants } from "./ui/button";
 import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
 import CountDown from "./CountDown";
-import getRequest from "@/helpers/getRequest";
 import Link from "next/link";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
+import { getRequestIsr } from "@/helpers/getRequest";
 
 const FlashSale = async () => {
-  const res = await getRequest(
+  const res = await getRequestIsr(
     `${API_ENDPOINTS.FLASH_SALE}?fields=${PRODUCT_FIELDS}&limit=4`
   );
   const products = res?.data;
