@@ -1,16 +1,34 @@
 "use client";
 
+import { usePathname, useSearchParams } from "next/navigation";
+import { Checkbox } from "./ui/checkbox";
+import { useCallback } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 
 const ProductFilters = () => {
-  const priceRanges = [
-    { min: 50, max: 200 },
-    { min: 201, max: 500 },
-    { min: 501, max: 1000 },
-    { min: 1001, max: 2000 },
-  ];
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      // Get the current list of values for the parameter
+      const currentValues = params.getAll(name);
+
+      // Append the new value to the existing list
+      const updatedValues = [...currentValues, value];
+
+      // Update the parameter with the new list of values
+      params.set(name, updatedValues.join(","));
+
+      return decodeURIComponent(params.toString());
+    },
+    [searchParams]
+  );
+
   const brands = ["haier", "hisense", "lg", "samsung", "whirlpool"];
+
   const subCategories = [
     "beverage-cooler",
     "compact",
@@ -22,79 +40,25 @@ const ProductFilters = () => {
   ];
   const ratings = [1, 2, 3, 4, 5];
 
-  const searchParams = useSearchParams();
-
-  const selectedBrands = searchParams.getAll("brands");
-  const selectedSubCategories = searchParams.getAll("subCategories");
-  const selectedRatings = searchParams.getAll("ratings");
-
-  const generateQueryParam = () => {
-    let queryParams = "";
-
-    // Brands
-    if (selectedBrands.length > 0) {
-      queryParams += `brands=${selectedBrands.join(",")}`;
-    }
-
-    // Sub Categories
-    if (selectedSubCategories.length > 0) {
-      queryParams += `&subCategories=${selectedSubCategories.join(",")}`;
-    }
-
-    // Ratings
-    if (selectedRatings.length > 0) {
-      queryParams += `&ratings=${selectedRatings.join(",")}`;
-    }
-
-    // Return the constructed query parameters
-    return queryParams ? `?${queryParams}` : "";
-  };
-
-  const generateCheckboxItems = (items, paramName) =>
-    items.map((item, index) => (
-      <label key={index}>
-        <input key={index} type="checkbox" name={paramName} value={item} />
-        <Link href={generateQueryParam()} className="flex items-center gap-2">
-          <span className="capitalize">{item}</span>
-        </Link>
-      </label>
-    ));
-
   return (
     <section className="col-span-1 space-y-5">
-      <div className="rounded-xl shadow-md border p-5">
-        <h3>Price Range</h3>
-        <hr className="my-5" />
-
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <input type="checkbox" name="" />
-            <label>$50 - $200</label>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <input type="checkbox" name="" />
-            <label>$201 - $500</label>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <input type="checkbox" name="" />
-            <label>$501 - $1000</label>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <input type="checkbox" name="" />
-            <label>$1001 - $2000</label>
-          </div>
-        </div>
-      </div>
-
       <div className="rounded-xl shadow-md border p-5">
         <h3>Brands</h3>
         <hr className="my-5" />
 
         <div className="space-y-2">
-          {generateCheckboxItems(brands, "brands")}
+          {brands?.map((item) => (
+            <Link
+              href={pathname + "?" + createQueryString("brands", item)}
+              className="flex items-center space-x-2"
+              key={item}
+            >
+              <Checkbox id={item} />
+              <label htmlFor={item} className="capitalize">
+                {item}
+              </label>
+            </Link>
+          ))}
         </div>
       </div>
 
@@ -103,7 +67,18 @@ const ProductFilters = () => {
         <hr className="my-5" />
 
         <div className="space-y-2">
-          {generateCheckboxItems(subCategories, "sub-categories")}
+          {subCategories?.map((item) => (
+            <Link
+              href={pathname + "?" + createQueryString("subCategories", item)}
+              className="flex items-center space-x-2"
+              key={item}
+            >
+              <Checkbox id={item} />
+              <label htmlFor={item} className="capitalize">
+                {item}
+              </label>
+            </Link>
+          ))}
         </div>
       </div>
 
@@ -112,7 +87,18 @@ const ProductFilters = () => {
         <hr className="my-5" />
 
         <div className="space-y-2">
-          {generateCheckboxItems(ratings, "ratings")}
+          {ratings?.map((item) => (
+            <Link
+              href={pathname + "?" + createQueryString("ratings", String(item))}
+              className="flex items-center space-x-2"
+              key={String(item)}
+            >
+              <Checkbox id={String(item)} />
+              <label htmlFor={String(item)} className="capitalize">
+                {item}
+              </label>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

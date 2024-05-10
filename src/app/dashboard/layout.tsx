@@ -3,13 +3,12 @@
 import { ReactNode } from "react";
 import { Layout, Menu, MenuProps } from "antd";
 import Link from "next/link";
-import Navbar from "@/components/shared/Navbar";
 
 const { Content, Sider } = Layout;
 const items: MenuProps["items"] = [
   {
     key: "1",
-    label: <Link href="/dashboard">Dashboard</Link>,
+    label: <Link href="/">Home</Link>,
   },
   {
     key: "2",
@@ -20,11 +19,17 @@ const items: MenuProps["items"] = [
 const dashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main>
-      {/* navbar */}
-      <Navbar />
-
       <Layout className="min-h-[calc(100dvh-64px)]">
         <Sider breakpoint="lg" collapsedWidth="0">
+          <Link
+            href="/"
+            className="font-bold text-xl py-5 w-full inline-block text-center text-white"
+          >
+            Frozify
+          </Link>
+
+          <hr className="w-[90%] mx-auto" />
+
           <Menu
             theme="dark"
             mode="inline"
@@ -41,8 +46,6 @@ const dashboardLayout = ({ children }: { children: ReactNode }) => {
           </Content>
         </Layout>
       </Layout>
-
-      {/* footer */}
     </main>
   );
 };

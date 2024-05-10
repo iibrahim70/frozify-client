@@ -26,7 +26,6 @@ export default function RootLayout({
       <body className={cn(baiJamJure.className)}>
         <ThemeProvider attribute="class" defaultTheme="white">
           {children}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>
