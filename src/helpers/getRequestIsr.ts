@@ -1,8 +1,10 @@
-const getRequestSsr = async (url: string) => {
+const getRequestIsr = async (url: string) => {
   try {
     // Make a fetch request to the provided URL with cache set to "no-store"
     const res = await fetch(url, {
-      cache: "no-store",
+      next: {
+        revalidate: 30,
+      },
     });
 
     // Check if the response is not okay (status code other than 2xx)
@@ -21,4 +23,4 @@ const getRequestSsr = async (url: string) => {
   }
 };
 
-export default getRequestSsr;
+export default getRequestIsr;

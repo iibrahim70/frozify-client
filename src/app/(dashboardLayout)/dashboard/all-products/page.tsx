@@ -7,20 +7,15 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { API_ENDPOINTS } from "@/constants";
-import { getRequestSsr } from "@/helpers/getRequest";
+import getRequestSsr from "@/helpers/getRequestSsr";
 import { IProduct } from "@/types";
 import Image from "next/image";
 
 const AllProducts = async () => {
-  const res = await fetch(
-    `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price`,
-    {
-      cache: "no-store",
-    }
+  const res = await getRequestSsr(
+    `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price`
   );
   const { data: products } = await res.json();
-  // const products = data?.data;
-  console.log(products);
 
   return (
     <Table>
