@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Bai_Jamjuree } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
-import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
-import Footer from "@/components/shared/Footer";
 
 const baiJamJure = Bai_Jamjuree({
   subsets: ["latin"],
