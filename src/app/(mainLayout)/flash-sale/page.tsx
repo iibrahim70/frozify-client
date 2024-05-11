@@ -1,7 +1,7 @@
 import ProductCard from "@/components/products/ProductCard";
 import { IProduct } from "@/types";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
-import getRequestSsr from "@/helpers/getRequestSsr";
+import { getRequestSsr } from "@/helpers/getRequest";
 
 const FlashSale = async () => {
   const res = await getRequestSsr(

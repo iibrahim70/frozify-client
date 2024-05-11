@@ -21,11 +21,11 @@ const Navbar = () => {
   // Define your navigation items as an array of objects
   const navItems = [
     { label: "Home", link: "/" },
-    { label: "Categories", link: "/categories" },
+    { label: "Categories", link: "/" },
     { label: "Products", link: "/products" },
     { label: "Flash Sale", link: "/flash-sale" },
-    { label: "About Us", link: "/about-us" },
-    { label: "Contact Us", link: "/contact-us" },
+    { label: "About Us", link: "/" },
+    { label: "Contact Us", link: "/" },
   ];
 
   // stop scrolling when nav is open on small devices

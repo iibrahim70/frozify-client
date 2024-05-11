@@ -2,7 +2,7 @@ import ProductFilters from "@/components/products/ProductFilters";
 import ProductCard from "@/components/products/ProductCard";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
 import { IProduct } from "@/types";
-import getRequestSsr from "@/helpers/getRequestSsr";
+import { getRequestSsr } from "@/helpers/getRequest";
 
 interface ISearchParamProps {
   searchParams: {
