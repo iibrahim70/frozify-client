@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        theme === "dark" ? "border-b border-gray-500" : "shadow-md"
+        theme === "dark" ? "border-b border-dark-gray" : "shadow-md"
       )}
     >
       <div className="section-wrapper flex items-center justify-between py-3">
@@ -47,8 +47,8 @@ const Navbar = () => {
 
         {/* middle */}
         <div className="max-md:hidden flex justify-between gap-5">
-          {navItems.map((item, index) => (
-            <Link key={index} href={item?.link}>
+          {navItems?.map((item) => (
+            <Link key={item?.label} href={item?.link}>
               {item?.label}
             </Link>
           ))}
@@ -86,7 +86,7 @@ const Navbar = () => {
         <div
           onClick={() => setIsMenuOpen(false)}
           className={cn(
-            "bg-black/60 fixed top-0 right-0 w-full h-full backdrop-blur-md z-50 md:hidden",
+            "bg-white/25 dark:bg-black/30 fixed top-0 right-0 w-full h-full backdrop-blur-md z-50 cursor-pointer md:hidden",
             menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           )}
         ></div>
@@ -94,7 +94,7 @@ const Navbar = () => {
         {/* mobile navigation content */}
         <div
           className={cn(
-            "bg-light-white dark:bg-light-black absolute top-0 left-0 w-1/2 min-h-dvh max-h-dvh z-50 md:hidden px-3 py-10 rounded transition-transform ease-in-out duration-300",
+            "bg-white/90 dark:bg-black/95 absolute top-0 left-0 w-1/2 min-h-dvh max-h-dvh z-50 md:hidden px-3 py-10 rounded transition-transform ease-in-out duration-300",
             menuOpen ? "translate-x-0" : "-translate-x-full"
           )}
         >
@@ -115,7 +115,7 @@ const Navbar = () => {
                 key={index}
                 href={item?.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-deep-black duration-300 transition-all cursor-pointer"
+                className="px-4 py-2 rounded hover:bg-light-gray dark:hover:bg-jet-gray duration-300 transition-all cursor-pointer"
               >
                 {item?.label}
               </Link>
