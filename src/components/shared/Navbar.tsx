@@ -16,7 +16,7 @@ import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [menuOpen, setIsMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   // Define your navigation items as an array of objects
   const navItems = [
@@ -34,11 +34,7 @@ const Navbar = () => {
   }, [menuOpen]);
 
   return (
-    <nav
-      className={cn(
-        theme === "dark" ? "border-b border-dark-gray" : "shadow-md"
-      )}
-    >
+    <nav className="shadow-md dark:border-b dark:border-dark-gray">
       <div className="section-wrapper flex items-center justify-between py-3">
         {/* left side */}
         <Link href="/" className="font-bold text-xl">
