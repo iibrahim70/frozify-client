@@ -12,9 +12,9 @@ const ProductImage = ({ images, title }: IProductImageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
 
   return (
-    <div className="grid grid-rows-5 gap-5 overflow-hidden rounded-md border">
+    <div className="grid grid-rows-5 gap-5 overflow-hidden rounded-md border dark:border-jet-gray">
       {/* large images */}
-      <div className="order-last md:order-first row-span-4 rounded-xl overflow-hidden py-3">
+      <div className="order-first row-span-4 rounded-xl overflow-hidden py-3">
         <Image
           src={images[currentImage]}
           alt={title}
@@ -31,7 +31,7 @@ const ProductImage = ({ images, title }: IProductImageProps) => {
           <div
             onMouseOver={() => setCurrentImage(index)}
             key={image + index}
-            className="rounded-md overflow-hidden cursor-pointer hover:brightness-90 duration-300 ease-in-out border p-2"
+            className="rounded-md overflow-hidden cursor-pointer hover:brightness-90 duration-300 ease-in-out border dark:border-jet-gray p-2"
           >
             <Image
               src={image}

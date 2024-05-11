@@ -47,7 +47,7 @@ const ProductContent = ({ product }: { product: IProduct }) => {
       </div>
 
       <div className="flex flex-col gap-2.5">
-        <p className="font-semibold uppercase text-dark/75 border-b pb-2.5">
+        <p className="font-semibold uppercase text-dark/75 border-b dark:border-jet-gray pb-2.5">
           Product Description
         </p>
         <p>{product?.productDescription}</p>
