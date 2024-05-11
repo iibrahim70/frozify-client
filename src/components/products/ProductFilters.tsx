@@ -52,7 +52,7 @@ const ProductFilters = () => {
 
   return (
     <section className="max-md:hidden lg:col-span-1 space-y-5">
-      <div className="rounded-xl shadow-md border p-5">
+      <div className="rounded-xl shadow-md border dark:border-jet-gray p-5">
         <h3>Brands</h3>
         <hr className="my-5" />
 
@@ -72,7 +72,7 @@ const ProductFilters = () => {
         </div>
       </div>
 
-      <div className="rounded-xl shadow-md border p-5">
+      <div className="rounded-xl shadow-md border dark:border-jet-gray p-5">
         <h3>Sub Category</h3>
         <hr className="my-5" />
 
@@ -92,7 +92,7 @@ const ProductFilters = () => {
         </div>
       </div>
 
-      <div className="rounded-xl shadow-md border p-5">
+      <div className="rounded-xl shadow-md border dark:border-jet-gray p-5">
         <h3>Ratings</h3>
         <hr className="my-5" />
 

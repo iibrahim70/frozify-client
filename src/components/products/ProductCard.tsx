@@ -17,7 +17,7 @@ const ProductCard = ({ data, className }: IProductCardProps) => {
       {data?.map((item: IProduct) => (
         <div
           key={item?._id}
-          className="shadow-md rounded-md border cursor-pointer"
+          className="shadow-md rounded-md border dark:border-jet-gray cursor-pointer"
         >
           <div className="overflow-hidden relative">
             <Image
