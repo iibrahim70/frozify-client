@@ -1,6 +1,6 @@
 const FlashSaleLoading = () => {
   return (
-    <section className="section-wrapper py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+    <section className="section-wrapper py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {Array.from({ length: 6 }, (_, index) => (
         <div
           key={index}

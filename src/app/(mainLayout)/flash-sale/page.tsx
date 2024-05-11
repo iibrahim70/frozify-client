@@ -12,7 +12,7 @@ const FlashSale = async () => {
   return (
     <main className="section-wrapper py-10">
       <ProductCard
-        className="col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
         data={products as IProduct[]}
       />
     </main>
