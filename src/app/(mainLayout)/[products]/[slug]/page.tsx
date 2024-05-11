@@ -19,15 +19,13 @@ const ProductDetails = async ({ params }: { params: { slug: string } }) => {
   const product = res.data;
 
   return (
-    <main className="section-wrapper py-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <ProductImage
-          images={product?.images as string[]}
-          title={product?.productName as string}
-        />
+    <main className="section-wrapper py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <ProductImage
+        images={product?.images as string[]}
+        title={product?.productName as string}
+      />
 
-        <ProductContent product={product as IProduct} />
-      </div>
+      <ProductContent product={product as IProduct} />
     </main>
   );
 };
