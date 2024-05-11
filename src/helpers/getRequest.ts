@@ -1,3 +1,5 @@
+"use server";
+
 const getRequestSsr = async (url: string) => {
   try {
     // Make a fetch request to the provided URL with cache set to "no-store"
