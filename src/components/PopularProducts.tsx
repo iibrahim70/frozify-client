@@ -3,7 +3,7 @@ import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
 import Link from "next/link";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
-import getRequestIsr from "@/helpers/getRequestIsr";
+import getRequestIsr from "@/app/utils/getRequestIsr";
 
 const PopularProducts = async () => {
   const res = await getRequestIsr(

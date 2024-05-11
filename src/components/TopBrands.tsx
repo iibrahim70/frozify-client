@@ -1,26 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useCallback } from "react";
 
 const TopBrands = () => {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  // Get a new searchParams string by merging the current
-  // searchParams with a provided key/value pair
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value);
-
-      return params.toString();
-    },
-    [searchParams]
-  );
-
   const brands = [
     {
       title: "haier",
@@ -55,12 +36,7 @@ const TopBrands = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
         {brands?.map((item) => (
           <Link
-            href={
-              pathname +
-              "products" +
-              "?" +
-              createQueryString("brand", item?.title)
-            }
+            href={`/products?brand=${item?.title}`}
             key={item?.title}
             className="flex flex-col items-center justify-center text-center gap-5 shadow-md rounded-md border dark:border-jet-gray p-5 cursor-pointer"
           >
