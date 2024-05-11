@@ -1,11 +1,10 @@
 import ProductContent from "@/components/products/ProductContent";
 import ProductImage from "@/components/products/ProductImage";
 import { IProduct } from "@/types";
-import { getRequestIsr, getRequestSsr } from "@/helpers/getRequest";
 import { API_ENDPOINTS } from "@/constants";
 
 export const generateStaticParams = async () => {
-  const res = await getRequestIsr(API_ENDPOINTS.PRODUCTS);
+  const res = await fetch(API_ENDPOINTS.PRODUCTS).then((res) => res.json());
   const products = res?.data;
 
   return products?.slice(0, 10)?.map((product: IProduct) => {
@@ -14,7 +13,9 @@ export const generateStaticParams = async () => {
 };
 
 const ProductDetails = async ({ params }: { params: { slug: string } }) => {
-  const res = await getRequestSsr(`${API_ENDPOINTS.PRODUCTS}/${params?.slug}`);
+  const res = await fetch(`${API_ENDPOINTS.PRODUCTS}/${params?.slug}`, {
+    cache: "no-store",
+  }).then((res) => res.json());
   const product = res.data;
 
   return (

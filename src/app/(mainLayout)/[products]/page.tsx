@@ -1,8 +1,8 @@
 import ProductFilters from "@/components/products/ProductFilters";
 import ProductCard from "@/components/products/ProductCard";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
-import { getRequestSsr } from "@/helpers/getRequest";
 import { IProduct } from "@/types";
+import getRequestSsr from "@/helpers/getRequestSsr";
 
 interface ISearchParamProps {
   searchParams: {

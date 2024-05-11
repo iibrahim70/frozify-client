@@ -1,9 +1,9 @@
 import { buttonVariants } from "./ui/button";
 import ProductCard from "./products/ProductCard";
 import { IProduct } from "@/types";
-import { getRequestIsr } from "@/helpers/getRequest";
 import Link from "next/link";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
+import getRequestIsr from "@/helpers/getRequestIsr";
 
 const PopularProducts = async () => {
   const res = await getRequestIsr(

@@ -4,7 +4,7 @@ import { IProduct } from "@/types";
 import CountDown from "./CountDown";
 import Link from "next/link";
 import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
-import { getRequestIsr } from "@/helpers/getRequest";
+import getRequestIsr from "@/helpers/getRequestIsr";
 
 const FlashSale = async () => {
   const res = await getRequestIsr(

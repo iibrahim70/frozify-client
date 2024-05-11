@@ -7,7 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { API_ENDPOINTS } from "@/constants";
-import { getRequestIsr, getRequestSsr } from "@/helpers/getRequest";
+import getRequestSsr from "@/helpers/getRequestSsr";
 import { IProduct } from "@/types";
 import Image from "next/image";
 
