@@ -29,7 +29,7 @@ const Products = async (params: ISearchParamProps) => {
         <ProductFilters />
 
         <ProductCard
-          className="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 h-fit"
+          className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 h-fit"
           data={products as IProduct[]}
         />
       </main>
