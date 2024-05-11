@@ -12,10 +12,15 @@ import { IProduct } from "@/types";
 import Image from "next/image";
 
 const AllProducts = async () => {
-  const res = await getRequestSsr(
-    `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price`
+  const res = await fetch(
+    `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price`,
+    {
+      cache: "no-store",
+    }
   );
-  const products = res?.data;
+  const { data: products } = await res.json();
+  // const products = data?.data;
+  console.log(products);
 
   return (
     <Table>
