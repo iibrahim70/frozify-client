@@ -15,7 +15,9 @@ const AllProducts = async () => {
   const res = await getRequestSsr(
     `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price`
   );
-  const { data: products } = await res.json();
+  const products = res?.data;
+
+  // const { data: products } = await res.json();
 
   return (
     <Table>

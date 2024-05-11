@@ -19,7 +19,7 @@ const items: MenuProps["items"] = [
 const dashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main>
-      <Layout className="min-h-[calc(100dvh-64px)]">
+      <Layout hasSider={true} className="min-h-[calc(100dvh-64px)]">
         <Sider breakpoint="lg" collapsedWidth="0">
           <Link
             href="/"
@@ -39,7 +39,7 @@ const dashboardLayout = ({ children }: { children: ReactNode }) => {
           />
         </Sider>
 
-        <Layout>
+        <Layout hasSider={true}>
           {/* content part */}
           <Content className="bg-white dark:bg-black dark:text-white p-10">
             {children}
