@@ -1,11 +1,11 @@
 import ProductContent from "@/components/products/ProductContent";
 import ProductImage from "@/components/products/ProductImage";
 import { IProduct } from "@/types";
-import { getRequestSsr } from "@/helpers/getRequest";
+import { getRequestIsr, getRequestSsr } from "@/helpers/getRequest";
 import { API_ENDPOINTS } from "@/constants";
 
 export const generateStaticParams = async () => {
-  const res = await getRequestSsr(API_ENDPOINTS.PRODUCTS);
+  const res = await getRequestIsr(API_ENDPOINTS.PRODUCTS);
   const products = res?.data;
 
   return products?.slice(0, 10)?.map((product: IProduct) => {
