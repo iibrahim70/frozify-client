@@ -7,6 +7,7 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./node_modules/keep-react/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -39,6 +40,8 @@ const config = {
       },
     },
   },
+
+  presets: [require("keep-react/preset")],
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
