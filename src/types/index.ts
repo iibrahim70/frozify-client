@@ -13,4 +13,5 @@ export interface IProduct {
   productDescription: string;
   rating: number;
   numberOfRatings: number;
+  createdAt: string;
 }

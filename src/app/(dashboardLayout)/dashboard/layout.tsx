@@ -41,9 +41,7 @@ const dashboardLayout = ({ children }: { children: ReactNode }) => {
 
         <Layout hasSider={true}>
           {/* content part */}
-          <Content className="bg-white dark:bg-black dark:text-white p-10">
-            {children}
-          </Content>
+          <Content className="p-10">{children}</Content>
         </Layout>
       </Layout>
     </main>
