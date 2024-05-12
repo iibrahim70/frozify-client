@@ -10,7 +10,7 @@ const ProductsTable = ({ data }: { data: IProduct[] }) => {
     <Table>
       <Table.Head>
         <Table.HeadCell className="min-w-[80px]">
-          <p className="text-body-5 font-medium text-metal-400">Serial no.</p>
+          <p className="text-body-5 font-medium">Serial no.</p>
         </Table.HeadCell>
 
         <Table.HeadCell className="min-w-[200px]">Details</Table.HeadCell>
@@ -40,13 +40,11 @@ const ProductsTable = ({ data }: { data: IProduct[] }) => {
         </Table.HeadCell>
       </Table.Head>
 
-      <Table.Body className="divide-gray-25 divide-y">
+      <Table.Body className="divide-gray-25 divide-y  dark:brightness-90">
         {data?.map((item: IProduct, index: number) => (
-          <Table.Row key={item?._id} className="bg-white">
+          <Table.Row key={item?._id} className="dark:border-jet-gray">
             <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">
-                {index + 1}
-              </p>
+              <p className="text-body-5 font-medium">{index + 1}</p>
             </Table.Cell>
 
             <Table.Cell>
@@ -58,7 +56,7 @@ const ProductsTable = ({ data }: { data: IProduct[] }) => {
                       className="size-10 mx-auto py-1"
                     />
                     <div>
-                      <p className="-mb-0.5 text-body-4 font-medium text-metal-500 line-clamp-1">
+                      <p className="-mb-0.5 text-body-4 font-medium line-clamp-1">
                         {item?.productName}
                       </p>
                       <span className="capitalize">{item?.brand}</span>
@@ -69,30 +67,24 @@ const ProductsTable = ({ data }: { data: IProduct[] }) => {
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">
+              <p className="text-body-5 font-medium">
                 {formatTimeStamp(item?.createdAt)?.formattedDate}
               </p>
-              <p className="text-body-5 font-normal text-metal-500">
+              <p className="text-body-5 font-normal">
                 {formatTimeStamp(item?.createdAt)?.formattedTime}
               </p>
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-body-4 font-medium text-metal-500">
-                {item?._id}
-              </p>
+              <p className="text-body-4 font-medium">{item?._id}</p>
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">
-                {item?.inStock}
-              </p>
+              <p className="text-body-5 font-medium">{item?.inStock}</p>
             </Table.Cell>
 
             <Table.Cell>
-              <p className="text-body-5 font-medium text-metal-500">
-                ${item?.price}
-              </p>
+              <p className="text-body-5 font-medium">${item?.price}</p>
             </Table.Cell>
           </Table.Row>
         ))}

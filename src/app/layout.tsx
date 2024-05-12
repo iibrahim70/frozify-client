@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bai_Jamjuree } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { ConfigProvider } from "antd";
 import "./globals.css";
 
 const baiJamJure = Bai_Jamjuree({
@@ -21,9 +22,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(baiJamJure.className)}>
+      <body className={cn(baiJamJure?.className)}>
         <ThemeProvider attribute="class" defaultTheme="white">
-          {children}
+          <ConfigProvider
+            theme={{
+              token: {
+                fontFamily: baiJamJure?.style?.fontFamily,
+              },
+            }}
+          >
+            {children}
+          </ConfigProvider>
         </ThemeProvider>
       </body>
     </html>
