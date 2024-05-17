@@ -25,3 +25,20 @@
 .ant-modal-title {
   @apply text-xl font-bold !important;
 }
+
+table {
+  @apply h-full w-full border-collapse;
+}
+
+th,
+td {
+  @apply p-5 text-center cursor-pointer;
+}
+
+th {
+  @apply bg-light-gray dark:bg-jet-gray;
+}
+
+tr:nth-child(even) {
+  @apply bg-light-gray/70 dark:bg-jet-gray/70;
+}

@@ -1,7 +1,5 @@
 import { ReactNode } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 
 const navItems = [
   {
@@ -19,10 +17,10 @@ const navItems = [
 const dashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main className="min-h-dvh flex justify-between gap-10">
-      <div className="w-[15%] p-5 bg-jet-gray">
+      <aside className="w-[15%] p-5 bg-jet-gray text-white">
         <Link
           href="/"
-          className="inline-block w-full font-bold text-xl text-center text-white"
+          className="inline-block w-full font-bold text-xl text-center"
         >
           Frozify
         </Link>
@@ -34,15 +32,15 @@ const dashboardLayout = ({ children }: { children: ReactNode }) => {
             <Link
               key={item?.key}
               href={item?.href}
-              className="w-full py-2 px-3 rounded-md duration-300 ease-in-out bg-transparent hover:bg-black/85"
+              className="w-full py-2 px-3 rounded-md duration-150 ease-in-out bg-transparent hover:bg-black/85"
             >
               {item?.label}
             </Link>
           ))}
         </div>
-      </div>
+      </aside>
 
-      <div className="w-[85%] bg-green-500">{children}</div>
+      <section className="w-[85%]">{children}</section>
     </main>
   );
 };
