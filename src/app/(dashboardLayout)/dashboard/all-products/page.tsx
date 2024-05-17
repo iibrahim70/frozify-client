@@ -11,7 +11,7 @@ const AllProducts = async () => {
 
   return (
     <main className="lg:pr-5">
-      <table>
+      <table className="w-full overflow-x-scroll">
         <thead>
           <tr>
             <th>Serial No.</th>
@@ -32,14 +32,18 @@ const AllProducts = async () => {
                 <Avatar img={item?.images[0]} className="size-10" />
 
                 <div className="flex flex-col items-start gap-1">
-                  <p className="truncate">{item?.productName}</p>
+                  <p className="whitespace-nowrap">{item?.productName}</p>
                   <span className="capitalize">{item?.brand}</span>
                 </div>
               </td>
 
               <td>
-                <p>{formatTimeStamp(item?.createdAt)?.formattedDate}</p>
-                <p>{formatTimeStamp(item?.createdAt)?.formattedTime}</p>
+                <p className="whitespace-nowrap">
+                  {formatTimeStamp(item?.createdAt)?.formattedDate}
+                </p>
+                <p className="whitespace-nowrap">
+                  {formatTimeStamp(item?.createdAt)?.formattedTime}
+                </p>
               </td>
 
               <td>
