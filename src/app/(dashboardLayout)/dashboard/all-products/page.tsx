@@ -10,8 +10,8 @@ const AllProducts = async () => {
   );
 
   return (
-    <main className="lg:pr-5">
-      <table className="w-full overflow-x-scroll">
+    <main className="lg:pr-5 w-full max-lg:overflow-x-scroll">
+      <table className="w-full">
         <thead>
           <tr>
             <th>Serial No.</th>
@@ -33,25 +33,27 @@ const AllProducts = async () => {
 
                 <div className="flex flex-col items-start gap-1">
                   <p className="whitespace-nowrap">{item?.productName}</p>
-                  <span className="capitalize">{item?.brand}</span>
+                  <small className="capitalize">{item?.brand}</small>
                 </div>
               </td>
 
               <td>
-                <p className="whitespace-nowrap">
-                  {formatTimeStamp(item?.createdAt)?.formattedDate}
-                </p>
-                <p className="whitespace-nowrap">
-                  {formatTimeStamp(item?.createdAt)?.formattedTime}
-                </p>
+                <div className="flex flex-col items-center gap-1">
+                  <small className="whitespace-nowrap">
+                    {formatTimeStamp(item?.createdAt)?.formattedDate}
+                  </small>
+                  <small className="whitespace-nowrap">
+                    {formatTimeStamp(item?.createdAt)?.formattedTime}
+                  </small>
+                </div>
               </td>
 
               <td>
-                <p>{item?._id}</p>
+                <small>{item?._id}</small>
               </td>
 
               <td>
-                <p>{item?.inStock}</p>
+                <small>{item?.inStock}</small>
               </td>
 
               <td>

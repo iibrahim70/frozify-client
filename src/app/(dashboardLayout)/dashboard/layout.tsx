@@ -59,7 +59,10 @@ const dashboardLayout = ({ children }: { children: ReactNode }) => {
 
       <section className="overflow-y-scroll w-full lg:w-[85%] py-10 max-lg:px-5">
         {/* mobile side bar open button */}
-        <button onClick={() => setIsMenuOpen(true)} className="mb-10 lg:hidden">
+        <button
+          onClick={() => setIsMenuOpen(true)}
+          className="sticky top-0 bg-black z-10 lg:hidden mb-10"
+        >
           <IoMenu className="size-6" />
         </button>
 
