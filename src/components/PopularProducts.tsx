@@ -6,10 +6,9 @@ import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
 import getRequestIsr from "@/app/utils/getRequestIsr";
 
 const PopularProducts = async () => {
-  const res = await getRequestIsr(
+  const { data } = await getRequestIsr(
     `${API_ENDPOINTS.POPULAR_PRODUCTS}?fields=${PRODUCT_FIELDS}&limit=8`
   );
-  const data = res.data;
 
   return (
     <section className="section-wrapper min-h-dvh flex items-center py-10 lg:py-20">

@@ -7,10 +7,9 @@ import { API_ENDPOINTS, PRODUCT_FIELDS } from "@/constants";
 import getRequestIsr from "@/app/utils/getRequestIsr";
 
 const FlashSale = async () => {
-  const res = await getRequestIsr(
+  const { data } = await getRequestIsr(
     `${API_ENDPOINTS.FLASH_SALE}?fields=${PRODUCT_FIELDS}&limit=4`
   );
-  const products = res?.data;
 
   return (
     <section className="section-wrapper min-h-dvh flex items-center pt-10 lg:pt-20">
@@ -30,7 +29,7 @@ const FlashSale = async () => {
 
         <ProductCard
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
-          data={products as IProduct[]}
+          data={data as IProduct[]}
         />
       </div>
     </section>

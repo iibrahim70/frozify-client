@@ -14,19 +14,18 @@ export const generateStaticParams = async () => {
 };
 
 const ProductDetails = async ({ params }: { params: { slug: string } }) => {
-  const res = await fetch(`${API_ENDPOINTS.PRODUCTS}/${params?.slug}`).then(
-    (res) => res.json()
-  );
-  const product = res.data;
+  const { data } = await fetch(
+    `${API_ENDPOINTS.PRODUCTS}/${params?.slug}`
+  ).then((res) => res.json());
 
   return (
     <main className="section-wrapper py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
       <ProductImage
-        images={product?.images as string[]}
-        title={product?.productName as string}
+        images={data?.images as string[]}
+        title={data?.productName as string}
       />
 
-      <ProductContent product={product as IProduct} />
+      <ProductContent product={data as IProduct} />
     </main>
   );
 };
