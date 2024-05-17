@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bai_Jamjuree } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ConfigProvider } from "antd";
 import "./globals.css";
 
@@ -24,15 +25,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(baiJamJure?.className)}>
         <ThemeProvider attribute="class" defaultTheme="white">
-          <ConfigProvider
-            theme={{
-              token: {
-                fontFamily: baiJamJure?.style?.fontFamily,
-              },
-            }}
-          >
-            {children}
-          </ConfigProvider>
+          <AntdRegistry>
+            <ConfigProvider
+              theme={{
+                token: {
+                  fontFamily: baiJamJure?.style?.fontFamily,
+                },
+              }}
+            >
+              {children}
+            </ConfigProvider>
+          </AntdRegistry>
         </ThemeProvider>
       </body>
     </html>
