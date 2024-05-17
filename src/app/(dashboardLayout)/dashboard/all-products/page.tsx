@@ -13,7 +13,7 @@ const AllProducts = async () => {
   // const { data: products } = await res.json();
 
   return (
-    <main className="pr-5">
+    <main className="lg:pr-5">
       <table>
         <thead>
           <tr>

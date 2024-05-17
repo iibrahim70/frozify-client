@@ -1,23 +1,34 @@
-import { ReactNode } from "react";
+"use client";
+
+import { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { IoClose, IoMenu } from "react-icons/io5";
 
 const navItems = [
   {
-    key: "1",
-    href: "/",
     label: "Home",
+    pathName: "/",
   },
   {
-    key: "2",
-    href: "/dashboard/all-products",
     label: "All Products",
+    pathName: "/dashboard/all-products",
   },
 ];
 
 const dashboardLayout = ({ children }: { children: ReactNode }) => {
+  const [menuOpen, setIsMenuOpen] = useState(false);
+  const pathName = usePathname();
+
+  // stop scrolling when nav is open on small devices
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+  }, [menuOpen]);
+
   return (
-    <main className="min-h-dvh flex justify-between gap-10">
-      <aside className="w-[15%] p-5 bg-jet-gray text-white">
+    <main className="min-h-dvh flex justify-between lg:gap-10">
+      <section className="max-lg:hidden lg:w-[15%] p-5 bg-jet-gray text-white">
         <Link
           href="/"
           className="inline-block w-full font-bold text-xl text-center"
@@ -27,20 +38,77 @@ const dashboardLayout = ({ children }: { children: ReactNode }) => {
 
         <hr className="w-[90%] mx-auto my-5" />
 
-        <div className="flex flex-col items-start w-full">
+        <div className="flex flex-col items-start space-y-1.5 w-full">
           {navItems?.map((item) => (
             <Link
-              key={item?.key}
-              href={item?.href}
-              className="w-full py-2 px-3 rounded-md duration-150 ease-in-out bg-transparent hover:bg-black/85"
+              key={item?.label}
+              href={item?.pathName}
+              className={cn(
+                "w-full py-2 px-3 rounded-md duration-150 ease-in-out bg-transparent whitespace-nowrap",
+
+                pathName === item?.pathName
+                  ? "bg-blue-600 hover:bg-blue-600/95"
+                  : "hover:bg-black/85"
+              )}
             >
               {item?.label}
             </Link>
           ))}
         </div>
-      </aside>
+      </section>
 
-      <section className="w-[85%]">{children}</section>
+      <section className="w-full lg:w-[85%] mt-10 max-lg:px-5">
+        {/* mobile side bar open button */}
+        <button onClick={() => setIsMenuOpen(true)} className="mb-10 lg:hidden">
+          <IoMenu className="size-6" />
+        </button>
+
+        {children}
+      </section>
+
+      {/* mobile navigation overlay */}
+      <div
+        onClick={() => setIsMenuOpen(false)}
+        className={cn(
+          "bg-white/25 dark:bg-black/30 fixed top-0 right-0 w-full h-full backdrop-blur-md z-50 cursor-pointer lg:hidden",
+          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        )}
+      ></div>
+
+      {/* mobile navigation content */}
+      <div
+        className={cn(
+          "bg-white/90 dark:bg-black/95 absolute top-0 left-0 w-1/2 md:w-3/12 min-h-dvh max-h-dvh z-50 lg:hidden px-3 py-10 rounded transition-transform ease-in-out duration-300",
+          menuOpen ? "translate-x-0" : "-translate-x-full"
+        )}
+      >
+        {/* closing button */}
+        <div className="w-[90%] mx-auto flex items-center justify-between gap-5">
+          <Link href="/" className="font-bold text-xl">
+            Frozify
+          </Link>
+
+          <button onClick={() => setIsMenuOpen(false)}>
+            <IoClose className="size-6" />
+          </button>
+        </div>
+
+        <hr className="w-[90%] mx-auto my-5" />
+
+        {/* navigation items */}
+        <div className="flex flex-col gap-1">
+          {navItems.map((item) => (
+            <Link
+              key={item?.label}
+              href={item?.pathName}
+              onClick={() => setIsMenuOpen(false)}
+              className="px-4 py-2 rounded hover:bg-light-gray dark:hover:bg-jet-gray duration-300 transition-all cursor-pointer"
+            >
+              {item?.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </main>
   );
 };

@@ -20,12 +20,12 @@ const Navbar = () => {
 
   // Define your navigation items as an array of objects
   const navItems = [
-    { label: "Home", link: "/" },
-    { label: "Categories", link: "/" },
-    { label: "Products", link: "/products" },
-    { label: "Flash Sale", link: "/flash-sale" },
-    { label: "About Us", link: "/" },
-    { label: "Contact Us", link: "/" },
+    { label: "Home", pathName: "/" },
+    { label: "Categories", pathName: "/" },
+    { label: "Products", pathName: "/products" },
+    { label: "Flash Sale", pathName: "/flash-sale" },
+    { label: "About Us", pathName: "/" },
+    { label: "Contact Us", pathName: "/" },
   ];
 
   // stop scrolling when nav is open on small devices
@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* middle */}
         <div className="max-md:hidden flex justify-between gap-5">
           {navItems?.map((item) => (
-            <Link key={item?.label} href={item?.link}>
+            <Link key={item?.label} href={item?.pathName}>
               {item?.label}
             </Link>
           ))}
@@ -106,10 +106,10 @@ const Navbar = () => {
 
           {/* navigation items */}
           <div className="flex flex-col gap-1">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <Link
-                key={index}
-                href={item?.link}
+                key={item?.label}
+                href={item?.pathName}
                 onClick={() => setIsMenuOpen(false)}
                 className="px-4 py-2 rounded hover:bg-light-gray dark:hover:bg-jet-gray duration-300 transition-all cursor-pointer"
               >
