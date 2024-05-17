@@ -40,6 +40,7 @@ const Hero = () => {
             loop
             muted
             src={require("../assets/banner/banner-1.mp4")}
+            className="min-h-[40dvh] object-fill"
           />
         </SwiperSlide>
 
@@ -50,6 +51,7 @@ const Hero = () => {
               src={banner}
               alt={`Banner ${index + 2}`}
               placeholder="blur"
+              className="min-h-[40dvh] object-fill"
             />
           </SwiperSlide>
         ))}
