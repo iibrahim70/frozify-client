@@ -27,7 +27,7 @@ const dashboardLayout = ({ children }: { children: ReactNode }) => {
   }, [menuOpen]);
 
   return (
-    <main className="min-h-dvh flex justify-between lg:gap-10">
+    <main className="max-h-screen flex justify-between lg:gap-10">
       <section className="max-lg:hidden lg:w-[15%] p-5 bg-jet-gray text-white">
         <Link
           href="/"
@@ -57,7 +57,7 @@ const dashboardLayout = ({ children }: { children: ReactNode }) => {
         </div>
       </section>
 
-      <section className="w-full lg:w-[85%] my-10 max-lg:px-5">
+      <section className="overflow-y-scroll w-full lg:w-[85%] py-10 max-lg:px-5">
         {/* mobile side bar open button */}
         <button onClick={() => setIsMenuOpen(true)} className="mb-10 lg:hidden">
           <IoMenu className="size-6" />
