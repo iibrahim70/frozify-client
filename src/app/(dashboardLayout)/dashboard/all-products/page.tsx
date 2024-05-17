@@ -5,12 +5,9 @@ import { Avatar } from "keep-react";
 import formatTimeStamp from "@/helpers/formatTimeStamp";
 
 const AllProducts = async () => {
-  const res = await getRequestSsr(
+  const { data } = await getRequestSsr(
     `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price,inStock,createdAt`
   );
-  const data = res?.data;
-
-  // const { data: products } = await res.json();
 
   return (
     <main className="lg:pr-5">
@@ -29,41 +26,33 @@ const AllProducts = async () => {
         <tbody>
           {data?.map((item: IProduct, index: number) => (
             <tr key={item?._id}>
-              <td className="text-body-5 font-medium">{index + 1}</td>
+              <td>{index + 1}</td>
 
-              <td className="px-0">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-3">
-                      <Avatar
-                        img={item?.images[0]}
-                        className="size-10 mx-auto py-1"
-                      />
-                      <div>
-                        <p className="-mb-0.5 text-body-4 font-medium line-clamp-1">
-                          {item?.productName}
-                        </p>
-                        <span className="capitalize">{item?.brand}</span>
-                      </div>
-                    </div>
-                  </div>
+              <td className="flex items-center gap-5">
+                <Avatar img={item?.images[0]} className="size-10" />
+
+                <div className="flex flex-col items-start gap-1">
+                  <p className="truncate">{item?.productName}</p>
+                  <span className="capitalize">{item?.brand}</span>
                 </div>
               </td>
 
-              <td className="px-0">
-                <p className="text-body-5 font-medium">
-                  {formatTimeStamp(item?.createdAt)?.formattedDate}
-                </p>
-                <p className="text-body-5 font-normal">
-                  {formatTimeStamp(item?.createdAt)?.formattedTime}
-                </p>
+              <td>
+                <p>{formatTimeStamp(item?.createdAt)?.formattedDate}</p>
+                <p>{formatTimeStamp(item?.createdAt)?.formattedTime}</p>
               </td>
 
-              <td className="px-0 text-body-4 font-medium">{item?._id}</td>
+              <td>
+                <p>{item?._id}</p>
+              </td>
 
-              <td className="text-body-5 font-medium">{item?.inStock}</td>
+              <td>
+                <p>{item?.inStock}</p>
+              </td>
 
-              <td className="px-0 text-body-5 font-medium">${item?.price}</td>
+              <td>
+                <p>${item?.price}</p>
+              </td>
             </tr>
           ))}
         </tbody>
