@@ -25,7 +25,7 @@ const AllProducts = async () => {
 
         <tbody>
           {data?.map((item: IProduct, index: number) => (
-            <tr key={item?._id}>
+            <tr key={item?._id} className="text-sm">
               <td>{index + 1}</td>
 
               <td className="flex items-center gap-5">
@@ -33,27 +33,25 @@ const AllProducts = async () => {
 
                 <div className="flex flex-col items-start gap-1">
                   <p className="whitespace-nowrap">{item?.productName}</p>
-                  <small className="capitalize">{item?.brand}</small>
+                  <p className="capitalize">{item?.brand}</p>
                 </div>
               </td>
 
               <td>
-                <div className="flex flex-col items-center gap-1">
-                  <small className="whitespace-nowrap">
-                    {formatTimeStamp(item?.createdAt)?.formattedDate}
-                  </small>
-                  <small className="whitespace-nowrap">
-                    {formatTimeStamp(item?.createdAt)?.formattedTime}
-                  </small>
-                </div>
+                <p className="whitespace-nowrap">
+                  {formatTimeStamp(item?.createdAt)?.formattedDate}
+                </p>
+                <p className="whitespace-nowrap">
+                  {formatTimeStamp(item?.createdAt)?.formattedTime}
+                </p>
               </td>
 
               <td>
-                <small>{item?._id}</small>
+                <p>{item?._id}</p>
               </td>
 
               <td>
-                <small>{item?.inStock}</small>
+                <p>{item?.inStock}</p>
               </td>
 
               <td>
