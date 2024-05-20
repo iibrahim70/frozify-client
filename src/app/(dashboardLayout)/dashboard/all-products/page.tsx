@@ -10,7 +10,7 @@ const AllProducts = async () => {
   );
 
   return (
-    <main className="lg:pr-5 w-full max-lg:overflow-x-scroll">
+    <main className="w-full max-lg:overflow-x-scroll">
       <table className="w-full">
         <thead>
           <tr>
