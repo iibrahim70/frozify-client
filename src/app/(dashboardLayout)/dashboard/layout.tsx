@@ -9,7 +9,7 @@ import { IoClose, IoMenu } from "react-icons/io5";
 const navItems = [
   {
     label: "Home",
-    pathName: "/",
+    pathName: "/dashboard",
   },
   {
     label: "All Products",

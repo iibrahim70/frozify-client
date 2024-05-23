@@ -9,15 +9,15 @@ const ProductsLoading = () => {
             className="rounded-md shadow-md border dark:border-jet-gray p-5 cursor-pointer"
           >
             <div className="animate-pulse">
-              <div className="h-4 rounded-full bg-light-gray dark:bg-dark-gray" />
+              <div className="h-4 rounded bg-light-gray dark:bg-dark-gray" />
 
-              <div className="h-1 rounded-full my-5 bg-light-gray dark:bg-dark-gray" />
+              <div className="h-1 rounded my-5 bg-light-gray dark:bg-dark-gray" />
 
               <div className="space-y-2">
                 {Array.from({ length: 5 }, (_, index) => (
                   <div
                     key={index}
-                    className="h-2.5 rounded-full bg-light-gray dark:bg-dark-gray"
+                    className="h-2.5 rounded bg-light-gray dark:bg-dark-gray"
                   />
                 ))}
               </div>
@@ -37,22 +37,22 @@ const ProductsLoading = () => {
               <div className="size-60 w-full rounded-t-md bg-light-gray dark:bg-dark-gray" />
 
               <div className="px-3 py-5 space-y-5">
-                <div className="h-3 rounded-full bg-light-gray dark:bg-dark-gray" />
+                <div className="h-3 rounded bg-light-gray dark:bg-dark-gray" />
 
                 <div className="space-y-1.5">
-                  <div className="h-1.5 rounded-full bg-light-gray dark:bg-dark-gray" />
-                  <div className="h-1.5 rounded-full bg-light-gray dark:bg-dark-gray" />
-                  <div className="h-1.5 rounded-full bg-light-gray dark:bg-dark-gray" />
+                  <div className="h-1.5 rounded bg-light-gray dark:bg-dark-gray" />
+                  <div className="h-1.5 rounded bg-light-gray dark:bg-dark-gray" />
+                  <div className="h-1.5 rounded bg-light-gray dark:bg-dark-gray" />
                 </div>
 
                 <div className="flex items-center justify-between gap-20">
-                  <div className="h-3 w-1/4 rounded-full bg-light-gray dark:bg-dark-gray" />
-                  <div className="h-3 w-1/4 rounded-full bg-light-gray dark:bg-dark-gray" />
+                  <div className="h-3 w-1/4 rounded bg-light-gray dark:bg-dark-gray" />
+                  <div className="h-3 w-1/4 rounded bg-light-gray dark:bg-dark-gray" />
                 </div>
 
                 <div className="flex items-center justify-between gap-20">
-                  <div className="h-6 w-2/5 rounded-full bg-light-gray dark:bg-dark-gray" />
-                  <div className="h-6 w-2/5 rounded-full bg-light-gray dark:bg-dark-gray" />
+                  <div className="h-6 w-2/5 rounded bg-light-gray dark:bg-dark-gray" />
+                  <div className="h-6 w-2/5 rounded bg-light-gray dark:bg-dark-gray" />
                 </div>
               </div>
             </div>

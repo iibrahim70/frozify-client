@@ -23,28 +23,28 @@ const ProductDetailsLoading = () => {
         {/* skeleton for product content */}
         <section>
           <div className="animate-pulse space-y-10">
-            <div className="h-3 w-1/2 rounded-full bg-light-gray dark:bg-dark-gray" />
+            <div className="h-3 w-1/2 rounded bg-light-gray dark:bg-dark-gray" />
 
             <div className="space-y-1.5">
-              <div className="h-1.5 rounded-full bg-light-gray dark:bg-dark-gray" />
-              <div className="h-1.5 rounded-full bg-light-gray dark:bg-dark-gray" />
-              <div className="h-1.5 rounded-full bg-light-gray dark:bg-dark-gray" />
+              <div className="h-1.5 rounded bg-light-gray dark:bg-dark-gray" />
+              <div className="h-1.5 rounded bg-light-gray dark:bg-dark-gray" />
+              <div className="h-1.5 rounded bg-light-gray dark:bg-dark-gray" />
             </div>
 
             <div className="space-y-3.5">
               <div className="w-1/2 flex items-center gap-10">
-                <div className="h-3 w-1/4 rounded-full bg-light-gray dark:bg-dark-gray" />
-                <div className="h-3 w-1/4 rounded-full bg-light-gray dark:bg-dark-gray" />
+                <div className="h-3 w-1/4 rounded bg-light-gray dark:bg-dark-gray" />
+                <div className="h-3 w-1/4 rounded bg-light-gray dark:bg-dark-gray" />
               </div>
 
               <div className="w-1/2 flex items-center gap-10">
-                <div className="h-3 w-2/5 rounded-full bg-light-gray dark:bg-dark-gray" />
-                <div className="h-3 w-2/5 rounded-full bg-light-gray dark:bg-dark-gray" />
+                <div className="h-3 w-2/5 rounded bg-light-gray dark:bg-dark-gray" />
+                <div className="h-3 w-2/5 rounded bg-light-gray dark:bg-dark-gray" />
               </div>
 
               <div className="flex items-center justify-between gap-10">
-                <div className="h-6 w-2/5 rounded-full bg-light-gray dark:bg-dark-gray" />
-                <div className="h-6 w-2/5 rounded-full bg-light-gray dark:bg-dark-gray" />
+                <div className="h-6 w-2/5 rounded bg-light-gray dark:bg-dark-gray" />
+                <div className="h-6 w-2/5 rounded bg-light-gray dark:bg-dark-gray" />
               </div>
             </div>
 
@@ -52,7 +52,7 @@ const ProductDetailsLoading = () => {
               {Array.from({ length: 15 }, (_, index) => (
                 <div
                   key={index}
-                  className="h-1.5 rounded-full bg-light-gray dark:bg-dark-gray"
+                  className="h-1.5 rounded bg-light-gray dark:bg-dark-gray"
                 />
               ))}
             </div>
