@@ -5,10 +5,9 @@ import { API_ENDPOINTS } from "@/constants";
 import getRequestIsr from "@/app/utils/getRequestIsr";
 
 export const generateStaticParams = async () => {
-  const res = await getRequestIsr(API_ENDPOINTS.PRODUCTS);
-  const products = res?.data;
+  const { data } = await getRequestIsr(API_ENDPOINTS.PRODUCTS);
 
-  return products?.slice(0, 10)?.map((product: IProduct) => {
+  return data?.slice(0, 10)?.map((product: IProduct) => {
     slug: product?._id;
   });
 };
