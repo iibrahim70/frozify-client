@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button, buttonVariants } from "../ui/button";
 import Link from "next/link";
 import formatCurrency from "@/helpers/formatCurrency";
+import Rating from "../Rating";
 
 interface IProductCardProps {
   data: IProduct[];
@@ -44,6 +45,8 @@ const ProductCard = ({ data, className }: IProductCardProps) => {
             <p className="line-clamp-3">{item?.productTitle}</p>
 
             <div className="flex items-center gap-3">
+              <Rating value={item?.rating} />
+
               <p>({item?.numberOfRatings})</p>
             </div>
 
