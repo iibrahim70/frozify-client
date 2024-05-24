@@ -1,9 +1,9 @@
 import formatCurrency from "@/helpers/formatCurrency";
 import { IProduct } from "@/types";
 import { Button } from "../ui/button";
-import { Rate } from "antd";
 import { cn } from "@/lib/utils";
 import SocialShare from "../SocialShare";
+import Rating from "../Rating";
 
 const ProductContent = ({ product }: { product: IProduct }) => {
   return (
@@ -18,7 +18,7 @@ const ProductContent = ({ product }: { product: IProduct }) => {
         </span>
 
         <div className="flex items-center gap-1">
-          <Rate disabled allowHalf defaultValue={product?.rating} />
+          <Rating value={product?.rating} />
           <p>({product?.numberOfRatings})</p>
         </div>
       </div>
