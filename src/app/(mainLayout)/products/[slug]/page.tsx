@@ -2,7 +2,7 @@ import ProductContent from "@/components/products/ProductContent";
 import ProductImage from "@/components/products/ProductImage";
 import { IProduct } from "@/types";
 import { API_ENDPOINTS } from "@/constants";
-import getRequestIsr from "@/app/utils/getRequestIsr";
+import getRequestIsr from "@/helpers/getRequestIsr";
 
 export const generateStaticParams = async () => {
   const { data } = await getRequestIsr(API_ENDPOINTS.PRODUCTS);

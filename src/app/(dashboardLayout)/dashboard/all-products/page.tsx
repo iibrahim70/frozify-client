@@ -1,5 +1,5 @@
 import { API_ENDPOINTS } from "@/constants";
-import getRequestSsr from "@/app/utils/getRequestSsr";
+import getRequestSsr from "@/helpers/getRequestSsr";
 import { IProduct } from "@/types";
 import { Avatar } from "keep-react";
 import formatTimeStamp from "@/helpers/formatTimeStamp";

@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import { IProduct } from "@/types";
 import Image from "next/image";
 import { Button, buttonVariants } from "../ui/button";
-import { Rate } from "antd";
 import Link from "next/link";
 import formatCurrency from "@/helpers/formatCurrency";
 
@@ -45,7 +44,6 @@ const ProductCard = ({ data, className }: IProductCardProps) => {
             <p className="line-clamp-3">{item?.productTitle}</p>
 
             <div className="flex items-center gap-3">
-              <Rate disabled allowHalf defaultValue={item?.rating} />
               <p>({item?.numberOfRatings})</p>
             </div>
 
