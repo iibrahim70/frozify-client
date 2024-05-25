@@ -2,7 +2,7 @@ import ProductContent from "@/components/products/ProductContent";
 import ProductImage from "@/components/products/ProductImage";
 import { IProduct } from "@/types";
 import { API_ENDPOINTS } from "@/constants";
-import getRequestIsr from "@/app/utils/getRequestIsr";
+import { getRequestIsr, getRequestSsr } from "@/helpers/getRequest";
 
 export const generateStaticParams = async () => {
   const { data } = await getRequestIsr(API_ENDPOINTS.PRODUCTS);
@@ -13,9 +13,9 @@ export const generateStaticParams = async () => {
 };
 
 const ProductDetails = async ({ params }: { params: { slug: string } }) => {
-  const { data } = await fetch(
+  const { data } = await getRequestSsr(
     `${API_ENDPOINTS.PRODUCTS}/${params?.slug}`
-  ).then((res) => res.json());
+  );
 
   return (
     <main className="section-wrapper py-10 grid grid-cols-1 md:grid-cols-2 gap-10">

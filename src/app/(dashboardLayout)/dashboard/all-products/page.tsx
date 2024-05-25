@@ -1,12 +1,12 @@
-import { API_ENDPOINTS } from "@/constants";
-import getRequestSsr from "@/app/utils/getRequestSsr";
+import { API_ENDPOINTS, DASHBOARD_PRODUCT_FIELDS } from "@/constants";
 import { IProduct } from "@/types";
 import { Avatar } from "keep-react";
 import formatTimeStamp from "@/helpers/formatTimeStamp";
+import { getRequestSsr } from "@/helpers/getRequest";
 
 const AllProducts = async () => {
   const { data } = await getRequestSsr(
-    `${API_ENDPOINTS.PRODUCTS}?fields=images,productName,brand,price,inStock,createdAt`
+    `${API_ENDPOINTS.PRODUCTS}?fields=${DASHBOARD_PRODUCT_FIELDS}`
   );
 
   return (

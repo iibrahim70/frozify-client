@@ -51,7 +51,7 @@ const Hero = () => {
               src={banner}
               alt={`Banner ${index + 2}`}
               placeholder="blur"
-              className="min-h-[40dvh] object-fill"
+              className="min-h-[40dvh] object-cover"
             />
           </SwiperSlide>
         ))}
